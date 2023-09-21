@@ -109,10 +109,6 @@
         margin-top: 1.5rem;
     }
 
-    &-heading {
-        margin-top: 3rem;
-    }
-
     &__account {
         overflow: hidden;
         margin-top: 1.1rem;
@@ -120,7 +116,9 @@
         border-spacing: 0;
         text-align: center;
 
-        
+        &-heading {
+            margin-top: 3rem;
+        }
 
         &__details {
             text-align: center;
@@ -197,3 +195,6 @@ td {
         }
     }
 }
+
+
+
