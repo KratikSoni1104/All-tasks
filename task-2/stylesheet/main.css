@@ -223,19 +223,18 @@ body {
 .content__user-id {
   margin-top: 1.5rem;
 }
+.content-heading {
+  margin-top: 3rem;
+}
 .content__account {
+  overflow: hidden;
   margin-top: 1.1rem;
   min-width: 68rem;
-  border-collapse: collapse;
   border-spacing: 0;
   text-align: center;
-  border-radius: 0.5px;
 }
 .content__account tbody:not(:last-child) {
   border-bottom: 1px solid #CFD7ED;
-}
-.content__account-heading {
-  margin-top: 3rem;
 }
 .content__account__header {
   border-radius: 9px 9px 0 0;
@@ -251,6 +250,7 @@ body {
 }
 
 thead tr {
+  border-radius: 9px;
   background-color: #FFE6D1;
 }
 

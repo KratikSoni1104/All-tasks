@@ -109,37 +109,23 @@
         margin-top: 1.5rem;
     }
 
+    &-heading {
+        margin-top: 3rem;
+    }
+
     &__account {
-        //overflow: hidden;
+        overflow: hidden;
         margin-top: 1.1rem;
         min-width: 68rem;
-        border-collapse: collapse;
         border-spacing: 0;
         text-align: center;
-        //border : .5px solid #CFD7ED; 
-        border-radius: .5px;
-        
 
         tbody:not(:last-child) {
             border-bottom: 1px solid #CFD7ED;
         }
 
-        &-heading {
-            margin-top: 3rem;
-        }
-
         &__header {
-            //background-color:#FFE6D1;
             border-radius: 9px 9px 0 0;
-            // display: flex;
-            // justify-content: space-between;
-            // text-align: center;
-            // align-items: center;
-            //padding: 1.5rem 2.2rem;
-
-            &-subhead {
-
-            }
         }
 
         &__details {
@@ -156,12 +142,13 @@
 }
 
 thead tr{
+    border-radius: 9px;
     background-color: #FFE6D1;
 }
 
 th {
+    //border-radius: 9px;
     padding: 1.5rem 0;
-
 }
 
 td {
