@@ -67,10 +67,10 @@
                             <td class="info">987601514444</td>
                             <td class="info toogle">
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="toggleCheckbox1" onclick="toggleStatus(event)">
                                     <span class="slider round"></span>
                                 </label>
-                                <span class="switch__status" data-on="ON" data-off="OFF"></span>
+                                <span class="switch__status" id="statusText1">OFF</span>
                             </td>
                         </tr>
                         <tr>
@@ -78,12 +78,12 @@
                             <td>Saving account</td>
                             <td>Test User 3</td>
                             <td>215516945675</td>
-                            <td class="toogle">
+                            <td class="info toogle">
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="toggleCheckbox2" onclick="toggleStatus(event)">
                                     <span class="slider round"></span>
                                 </label>
-                                <span class="switch__status">ON</span>
+                                <span class="switch__status" id="statusText2">OFF</span>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->
@@ -109,10 +109,10 @@
                             <td class="info">787651444412</td>
                             <td class="info toogle">
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="toggleCheckbox3" onclick="toggleStatus(event)">
                                     <span class="slider round"></span>
                                 </label>
-                                <span class="switch__status">ON</span>
+                                <span class="switch__status" id="statusText3">OFF</span>
                             </td>
                         </tr>
                         <tr>
@@ -122,10 +122,10 @@
                             <td class="info">529685741253</td>
                             <td class="info toogle">
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="toggleCheckbox4" onclick="toggleStatus(event)">
                                     <span class="slider round"></span>
                                 </label>
-                                <span class="switch__status">ON</span>
+                                <span class="switch__status" id="statusText4">OFF</span>
                             </td>
                         </tr>
                         <tr>
@@ -133,12 +133,12 @@
                             <td>Credit Card</td>
                             <td>Username Testing 6</td>
                             <td>569325854785</td>
-                            <td class="toogle">
+                            <td class="info toogle">
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="toggleCheckbox5" onclick="toggleStatus(event)">
                                     <span class="slider round"></span>
                                 </label>
-                                <span class="switch__status">ON</span>
+                                <span class="switch__status" id="statusText5">OFF</span>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->
@@ -166,5 +166,23 @@
             <input type="checkbox">
             <span class="slider round"></span>
         </label>
+
+        <script>
+
+            function toggleStatus(event) {
+                const checkbox = event.target;
+                const statusTextId = checkbox.id.replace('toggleCheckbox', 'statusText');
+                const statusText = document.getElementById(statusTextId);
+
+                if (checkbox.checked) {
+                    statusText.textContent = 'ON';
+                    statusText.style.color = "#F27B1A";
+                } else {
+                    statusText.textContent = 'OFF';
+                    statusText.style.color = "#4A4A4A";
+                }
+            }
+
+        </script>
     </body>
 </html>
