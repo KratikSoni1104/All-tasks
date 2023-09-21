@@ -240,8 +240,7 @@ body {
 }
 
 .info {
-  border-collapse: collapse;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #CFD7ED;
 }
 
 thead tr {
