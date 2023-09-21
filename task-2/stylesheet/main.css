@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Open+Sans:wght@300;400;500;600;700;800&family=Pacifico&display=swap");
+:root {
+  --color-primary-light:#F58F22;
+  --color-primary-dark:#EF6712;
+  --para:#414141;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media (max-width: 77.5em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 43.25em) {
+  html {
+    font-size: 43%;
+  }
+}
+@media (max-width: 32em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-family: "open sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.f-500 {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.f-11 {
+  font-size: 1.1rem;
+}
+
+.f-12 {
+  font-size: 1.2rem;
+}
+
+.f-14 {
+  font-size: 1.4rem;
+}
+
+.f-16 {
+  font-size: 1.6rem;
+}
+
+.f-18 {
+  font-size: 1.8rem;
+}
+
+.f-20 {
+  font-size: 2rem;
+}
+
+.l-16 {
+  line-height: 1.6rem;
+}
+
+.l-18 {
+  line-height: 1.8rem;
+}
+
+.l-19 {
+  line-height: 1.9rem;
+}
+
+.l-20 {
+  line-height: 2rem;
+}
+
+.l-21 {
+  line-height: 2.1rem;
+}
+
+.l-22 {
+  line-height: 2.2rem;
+}
+
+.l-24 {
+  line-height: 2.4rem;
+}
+
+.l-26 {
+  line-height: 2.6rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.d-block {
+  display: block;
+}
+
+.light-shadow {
+  box-shadow: 0 2px 8px rgba(222, 227, 242, 0.4);
+}
+
+.b-5 {
+  border: 0.5px solid #CFD7ED;
+  border-radius: 10px;
+}
+
+.para-col {
+  color: var(--para);
+}
+
+.container {
+  max-width: 96rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  box-sizing: content-box;
+  height: 5.9rem;
+  border-bottom: 5rem solid transparent;
+  -o-border-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+     border-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  border-image-slice: 1;
+}
+.header__logo {
+  box-sizing: content-box;
+  padding: 0 0 1.5rem 1.1rem;
+  height: 4.6rem;
+  width: 22.8rem;
+}
+
+.top-paragraph {
+  display: inline-block;
+  margin-top: 2.2rem;
+  margin-left: 14rem;
+  color: var(--para);
+}
+.top-link {
+  position: absolute;
+  top: 3.1rem;
+  right: 12rem;
+  color: #004A7F;
+}
+.top-img {
+  position: absolute;
+  top: 3.1rem;
+  right: 12rem;
+}
+
+.process {
+  margin: 2.8rem 12rem 0;
+  position: relative;
+}
+.process__step-icon--1 {
+  left: 2.7rem;
+  position: absolute;
+  z-index: 20;
+}
+.process__step-icon--2 {
+  position: absolute;
+  left: 34.5rem;
+  z-index: 20;
+}
+.process__step-icon--3 {
+  position: absolute;
+  right: 3rem;
+  z-index: 20;
+}
+.process__progress-line {
+  position: absolute;
+  left: 3.7rem;
+  top: 1.5rem;
+  z-index: 10;
+}
+.process__name {
+  margin-top: 4rem;
+}
+.process__name-section {
+  text-align: center;
+  justify-content: space-between;
+  color: var(--para);
+}
+.process__name-col {
+  color: #C4C4C4;
+}
+
+.content {
+  margin: 1.6rem 12rem 0;
+  padding: 2rem 2rem;
+  border: 0.5px solid #CFD7ED;
+  border-radius: 10px;
+}
+.content__user-id {
+  margin-top: 1.5rem;
+}
+.content__account {
+  margin-top: 1.1rem;
+  min-width: 68rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+  border-radius: 0.5px;
+}
+.content__account tbody:not(:last-child) {
+  border-bottom: 1px solid #CFD7ED;
+}
+.content__account-heading {
+  margin-top: 3rem;
+}
+.content__account__header {
+  border-radius: 9px 9px 0 0;
+}
+.content__account__details {
+  text-align: center;
+  color: #4A4A4A;
+  letter-spacing: 0.5px;
+}
+
+.info {
+  border-bottom: 1px solid #CFD7ED;
+}
+
+thead tr {
+  background-color: #FFE6D1;
+}
+
+th {
+  padding: 1.5rem 0;
+}
+
+td {
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.terms {
+  margin-top: 4rem;
+  padding-right: 3.8rem;
+  padding-bottom: 2rem;
+}
+.terms--2 {
+  margin-top: 1.1rem;
+}
+.terms__care {
+  margin-top: 1rem;
+}
+.terms__anchor {
+  color: #176ABE;
+}
+.terms__proceed-btn {
+  padding: 1.15rem 3.65rem;
+  background-color: #F27B1A;
+  display: inline-block;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+.terms .term {
+  display: flex;
+}
+.terms .term-checkbox {
+  margin-right: 1rem;
+}
+.terms .term-checkbox--1 {
+  margin-bottom: 1.1rem;
+}/*# sourceMappingURL=main.css.map */

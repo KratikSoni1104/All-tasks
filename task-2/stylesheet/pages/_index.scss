@@ -1,0 +1,219 @@
+//----------------------------------- para color ----------------------------------------//
+.para-col {
+    color : var(--para);
+}
+
+// ------------------------------------------------   CONTAINER  ---------------- --------------------------------    //
+.container {
+    max-width: 96rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+// ------------------------------------------------   header  ---------------- --------------------------------    //
+.header {
+    box-sizing: content-box;
+    height: 5.9rem;
+    border-bottom: 5rem solid transparent;
+    border-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    border-image-slice: 1;
+    
+    &__logo {
+        box-sizing: content-box;
+        padding: 0 0 1.5rem 1.1rem;
+        height: 4.6rem;
+        width: 22.8rem;
+    }
+}
+
+// ------------------------------------------------   top-section  ---------------- --------------------------------    //
+.top {
+    &-paragraph {
+        display: inline-block;
+        margin-top: 2.2rem;
+        margin-left: 14rem;
+        color : var(--para);
+    }
+    &-link {
+        position: absolute;
+        top: 3.1rem;
+        right: 12rem;
+        color: #004A7F;
+    }
+    &-img {
+        position: absolute;
+        top: 3.1rem;
+        right: 12rem;
+    }
+}
+
+// ------------------------------------------------ Process 
+.process {
+    margin: 2.8rem 12rem 0;
+    position: relative;
+    
+     
+    // test purpose
+    
+
+    &__step-icon {
+        &--1 {
+            left: 2.7rem;
+            position: absolute;
+            z-index: 20;
+        }
+        &--2 {
+            position: absolute;
+            left: 34.5rem;
+            z-index: 20;
+        }
+
+        &--3 {
+            position: absolute;
+            right: 3rem;
+            z-index: 20;
+        }
+        
+    }
+
+    &__progress-line {
+        position: absolute;
+        left: 3.7rem;
+        top: 1.5rem;
+        z-index: 10;
+    }
+    
+
+    &__name {
+        margin-top: 4rem;
+        &-section {
+            text-align: center;
+            justify-content: space-between;
+            color: var(--para);
+        }
+        &-col {
+            color : #C4C4C4;
+        }
+    }
+}
+
+
+//---------------------------------------------------------------- CONTENT ----------------------------------------------------------------//
+.content {
+    margin: 1.6rem 12rem 0;
+    padding: 2rem 2rem;
+    border: .5px solid #CFD7ED;
+    border-radius: 10px;
+
+    &__user-id {
+        margin-top: 1.5rem;
+    }
+
+    &__account {
+        //overflow: hidden;
+        margin-top: 1.1rem;
+        min-width: 68rem;
+        border-collapse: collapse;
+        border-spacing: 0;
+        text-align: center;
+        //border : .5px solid #CFD7ED; 
+        border-radius: .5px;
+        
+
+        tbody:not(:last-child) {
+            border-bottom: 1px solid #CFD7ED;
+        }
+
+        &-heading {
+            margin-top: 3rem;
+        }
+
+        &__header {
+            //background-color:#FFE6D1;
+            border-radius: 9px 9px 0 0;
+            // display: flex;
+            // justify-content: space-between;
+            // text-align: center;
+            // align-items: center;
+            //padding: 1.5rem 2.2rem;
+
+            &-subhead {
+
+            }
+        }
+
+        &__details {
+            text-align: center;
+            color: #4A4A4A;
+            letter-spacing: .5px;
+        }
+    }
+}
+
+.info {
+    //padding: 2rem 0;
+    border-bottom: 1px solid #CFD7ED;
+}
+
+thead tr{
+    background-color: #FFE6D1;
+}
+
+th {
+    padding: 1.5rem 0;
+
+}
+
+td {
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+
+
+//---------------------------------------------------------------- TERMS ----------------------------------------------------------------//
+.terms {
+    margin-top: 4rem;
+    padding-right: 3.8rem;
+    padding-bottom: 2rem;
+
+    &--2 {
+        margin-top: 1.1rem;
+    }
+
+    &__care {
+        margin-top: 1rem;
+    }
+
+    &__anchor {
+        color: #176ABE;
+    }
+
+    &__proceed-btn {
+        padding : 1.15rem 3.65rem;
+        background-color: #F27B1A;
+        display: inline-block;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 0.5px;
+        margin-top: 3rem;
+        text-transform: uppercase;
+    }
+
+    .term {
+        display: flex;
+
+        
+        
+        &-checkbox {
+            &--1 {
+                margin-bottom: 1.1rem;
+            }
+            margin-right: 1rem;
+        }
+    }
+}
