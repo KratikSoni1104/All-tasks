@@ -120,13 +120,7 @@
         border-spacing: 0;
         text-align: center;
 
-        tbody:not(:last-child) {
-            border-bottom: 1px solid #CFD7ED;
-        }
-
-        &__header {
-            border-radius: 9px 9px 0 0;
-        }
+        
 
         &__details {
             text-align: center;
@@ -137,8 +131,8 @@
 }
 
 .info {
-    //padding: 2rem 0;
-    border-bottom: 1px solid #CFD7ED;
+    border-collapse: collapse;
+    border-bottom: 1px solid #000;
 }
 
 thead tr{
