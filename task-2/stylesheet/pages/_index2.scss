@@ -1,0 +1,89 @@
+//------------------------------------ USER BOX --------------------------------//
+.user {
+
+    &-box {
+        border : .5px solid #CFD7ED;
+        border-radius: 10px;
+        margin: 1.5rem 0 3rem;
+        overflow: hidden;
+        display: flex;
+        width: max-content;
+    }
+
+    &__details {
+        padding: 2rem;
+        border-right: 1px solid #CFD7ED;
+        display: flex;
+        gap: 1.7rem;
+
+        &-info {
+
+            &__test-user {
+                margin-bottom: 0.5rem;
+            }
+
+            &__test-acc--1 {
+                margin-bottom: 2.5rem;
+            }
+        }
+        
+    }
+
+    &__link {
+        padding: 2rem 3rem 0;
+    }
+   
+}
+
+
+//---------------------------------------------------------------- CARD --------------------------------//
+.card {
+    margin-top: 1.5rem;
+
+    &-box {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        row-gap: 2.7rem;
+        column-gap: 2rem;
+        width: 60.6rem;
+    }
+
+    &__img {
+        grid-area: 1/1/-1/2;
+    }
+
+    &__details {
+        display: flex;
+        gap: 1rem;
+        text-align: center;
+        &__box {
+            &--1,&--2,&--3 {
+                display: flex;
+                flex-direction: column;
+                gap: 0.9rem;
+            }
+        }
+
+        &-input {
+            outline: none;
+            border : 1px solid #6E8CA6;
+            border-radius: 7px;
+            text-align: center;
+            width: 5.5rem;
+            height: 3rem;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            color: var(--para);
+
+
+            &::-webkit-input-placeholder {
+                display: flex;justify-content: center;
+                align-items: center;
+                line-height: 1.8rem;
+            }
+        }
+    }
+}
+

@@ -165,7 +165,7 @@
                         <p class="term-desc f-11 l-16 para-col">I understand that by clicking on proceed I authorize ICICI Bank to activate and link my accounts to User id - Shuklaret</p>
                     </div>
 
-                    <a href="#" class="terms__proceed-btn bold f-12 l-16" id="proceed-btn">proceed</a>
+                    <a href="#" class="btn terms__proceed-btn bold f-12 l-16" id="proceed-btn">proceed</a>
                     <p class="terms__care f-11 l-22 para-col">If any account displayed above does not belong to you, Please contact <a href="#" class="semibold terms__anchor"> Customer Care</a> or visit branch.
                     </p>
                 </div>
@@ -181,9 +181,12 @@
 
                 if(c1.checked && c2.checked) {
                     btn.style.backgroundColor='#F27B1A';
+                    btn.style.cursor='pointer';
+                    btn.classList.add('disabled');
                 } else {
                     btn.style.backgroundColor = 'grey';
-                    btn.style.cursor='disabled';
+                    btn.style.cursor='not-allowed';
+                    btn.classList.remove('disabled');
                 }
             }
             

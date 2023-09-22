@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+
+        <link rel="stylesheet" href="stylesheet/main.css">
+        
+        <title>Task 2</title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="images/icici-logo.png" alt="logo image" class="header__logo">
+        </header>
+        <main class="container">
+            <p class="top-paragraph f-18 l-24 bold">Link all your accounts</p>
+            <a href="#" class="top-link f-12 bold l-18">Remind Me Later</a>
+            
+            <div class="process">
+                <img src="images/procees-complete-icon.png" alt="process-step" class="process__step-icon--1">
+                <img src="images/process-step-icon-1.png" alt="process-step" class="process__step-icon--2">
+                <img src="images/process-step-icon-2.png" alt="process-step" class="process__step-icon--3">
+                <img src="images/process-line-half.png" alt="" class="process__progress-line">
+
+                <div class="process__name-section d-flex bold l-19 f-14">
+                    <div class="process__name">
+                        <span class="process__name-1">Activation</span><br>
+                        <span class="process__name-1">and Linking</span>
+                    </div>
+                    <div class="process__name">
+                        <span class="process__name-2 process__name-same">Grid Card</span><br>
+                        <span class="process__name-2">Authentication</span>
+                    </div>
+                    <div class="process__name process__name-col">
+                        <span class="process__name-3">Request</span><br>
+                        <span class="process__name-3">Confirmation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content light-shadow">
+                <div class="user">
+                    <p class="user__account-name bold f-14 l-18">
+                        Selected Accounts
+                    </p>
+                    <div class="user-box light-shadow para-col">
+                        <div class="user__details">
+                            <div class="user__details-accounts semibold f-14 l-19">
+                                <p class="acc-name m-5">Saving account</p>
+                                <p class="credit">Credit Card</p>
+                            </div>
+                            <div class="user__details-info f-14 l-19">
+                                <p class="user__details-info__test-user semibold">Username Testing 1</p>
+                                <p class="user__details-info__test-acc user__details-info__test-acc--1">987601514444</p>
+                                <p class="user__details-info__test-user semibold">Username Testing 6</p>
+                                <p class="user__details-info__test-acc user__details-info__test-acc--2">569325854785</p>
+                            </div>
+                        </div>
+                        <div class="user__link bold f-14 l-19 ">
+                            <p class="user__link-activate--1 m-5">Activate</p>
+                            <p class="user__link-activate--2">Activate and Link</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-header bold f-14 l-18">
+                    Please enter Grid card details and OTP to authorize your account
+                </p>
+
+                <div class="card para-col">
+                    <p class="card__heading bold f-12 l-16">Grid Card</p>
+
+                    <div class="card-box">
+                        <img src="images/credit-card.png" alt="credit-card" class="card__img">
+                        <p class="card__guideline f-12 l-19">
+                            Please enter the following digits of your Debit Grid (This will be on the back of your card) for Account Number : <span class="bold">000012XXXXXX</span>
+                        </p>
+                        <div class="card__details f-14 bold l-19">
+                            <div class="card__details__box--1">
+                                <span>C</span>
+                                <input type="text" id="input1" class="card__details-input" oninput="checkInput()">
+                            </div>
+                            <div class="card__details__box--2">
+                                <span>K</span>
+                                <input type="text" id="input2" class="card__details-input" oninput="checkInput()">
+                            </div>
+                            <div class="card__details__box--3">
+                                <span>O</span>
+                                <input type="text" id="input3" class="card__details-input" oninput="checkInput()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons bold l-16 f-12">
+                    <a href="#" id="otp-btn" class="btn otp-btn">send otp</a>
+                    <a href="#" class="btn back-btn">back</a>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            function checkInput() {
+                const v1 = document.getElementById("input1").value;
+                const v2 = document.getElementById("input2").value;
+                const v3 = document.getElementById("input3").value;
+                const btn = document.getElementById("otp-btn");
+
+                if(v1 !== "" && v2!== "" && v3 !== "") {
+                    btn.style.backgroundColor = "#F27B1A";
+                    btn.style.cursor='pointer';
+                    btn.classList.add('disabled');
+                } else {
+                    btn.style.backgroundColor = "#C4C4C4";
+                    btn.style.cursor='not-allowed';
+                    btn.classList.remove('disabled');
+                }
+            }
+        </script>
+    </body>
+</html>
