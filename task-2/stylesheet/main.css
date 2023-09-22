@@ -402,6 +402,24 @@ td {
   color: #004A7F;
 }
 
+.content--3 {
+  padding-top: 2.5rem;
+}
+
+.greet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.user {
+  text-align: center;
+}
+.user__id {
+  margin-bottom: 1rem;
+}
+
 .switch {
   position: relative;
   display: inline-block;
