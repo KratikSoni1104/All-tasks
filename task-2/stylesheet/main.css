@@ -371,9 +371,6 @@ td {
   margin-top: 3rem;
   display: none;
 }
-.otp:target {
-  display: block;
-}
 .otp-resend {
   font-family: Helvetica, sans-serif;
   line-height: 1.15rem;

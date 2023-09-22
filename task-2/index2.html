@@ -117,19 +117,23 @@
                 </div>
 
                 <div class="buttons bold l-16 f-12">
-                    <a href="#otp" id="otp-btn" class="btn otp-btn" onclick="handleClick('send')">send otp</a>
+                    <a href="#" id="otp-btn" class="btn otp-btn" onclick="handleClick('send')">send otp</a>
                     <a href="#" class="btn back-btn" onclick="handleClick('back')">back</a>
                 </div>
             </div>
         </main>
 
         <script>
-            function handleSend(clicked) {
+            function handleClick(clicked) {
                 const otp = document.getElementById('otp');
+                const btn = document.getElementById('otp-btn');
+
                 if(clicked === "send") {
                     otp.style.display='block';
-                } else {
+                    btn.textContent = 'proceed';
+                } else if(clicked === "back") {
                     otp.style.display='none';
+                    btn.textContent = 'send otp';
                 }
                 
             }
