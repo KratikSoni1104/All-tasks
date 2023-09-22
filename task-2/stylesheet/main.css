@@ -291,13 +291,6 @@ td {
   display: flex;
 }
 
-.buttons {
-  margin-top: 4rem;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
 .user-box {
   border: 0.5px solid #CFD7ED;
   border-radius: 10px;
@@ -402,8 +395,23 @@ td {
   color: #004A7F;
 }
 
+.buttons {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.proceed-btn {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  background-color: #F27B1A !important;
+}
+
 .content--3 {
-  padding-top: 2.5rem;
+  padding: 2.5rem 0 4rem;
 }
 
 .greet {
@@ -418,6 +426,45 @@ td {
 }
 .user__id {
   margin-bottom: 1rem;
+}
+
+.progress {
+  margin: 2rem 8.5rem 3rem 10.5rem;
+  position: relative;
+}
+.progress__request {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.progress__line-icon--1 {
+  position: absolute;
+  top: 5.4rem;
+  left: 5.5rem;
+  z-index: 10;
+}
+.progress__line-icon--2 {
+  position: absolute;
+  top: 5.4rem;
+  right: 7.3rem;
+  z-index: 10;
+}
+.progress__line-progress {
+  position: absolute;
+  top: 6.9rem;
+  left: 6.8rem;
+  z-index: 5;
+}
+.progress__button {
+  text-align: center;
+}
+.progress__para {
+  margin-top: 5.5rem;
+  text-align: center;
+}
+
+.cnt-btn.btn {
+  background-color: #F27B1A;
 }
 
 .switch {
@@ -538,4 +585,6 @@ input:checked + .slider:before {
 
 .otp-btn {
   cursor: not-allowed;
+  z-index: 10;
+  background-color: #F27B1A;
 }/*# sourceMappingURL=main.css.map */

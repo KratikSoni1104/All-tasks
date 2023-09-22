@@ -8,7 +8,6 @@
     color: #fff;
     text-align: center;
     letter-spacing: 0.5px;
-    // margin-top: 3rem;
     text-transform: uppercase;
     transition: all .2s;
 }
@@ -21,5 +20,6 @@
 
 .otp-btn {
     cursor: not-allowed;
-    
+    z-index: 10;
+    background-color: #F27B1A;
 }

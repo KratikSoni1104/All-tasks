@@ -1,7 +1,7 @@
 
 //---------------------------------------------------------------- content ----------------------------------------------------------------//
 .content--3 {
-    padding-top: 2.5rem;
+    padding: 2.5rem 0 4rem;
 }
 
 //---------------------------------------------------------------- content ---------------------------------------------------------------- greet --------------------------------//
@@ -21,4 +21,53 @@
     &__id {
         margin-bottom: 1rem;
     }
+}
+
+//---------------------------------------------------------------- content ---------------------------------------------------------------- PROCESS --------------------------------//
+.progress {
+    margin: 2rem 8.5rem 3rem 10.5rem;
+    position: relative;
+    &__request {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    &__line {
+        
+        &-icon {
+            &--1 {
+                position: absolute;
+                top: 5.4rem;
+                left: 5.5rem;
+                z-index: 10;
+            }
+            &--2 {
+                position: absolute;
+                top: 5.4rem;
+                right: 7.3rem;
+                z-index: 10;
+            }
+        }
+
+        &-progress {
+            position: absolute;
+            top: 6.9rem;
+            left: 6.8rem;
+            z-index: 5;
+        }
+    }
+
+    &__button {
+        text-align: center;
+    }
+
+    &__para {
+        margin-top: 5.5rem;
+        text-align: center;
+    }
+}
+
+.cnt-btn.btn {
+    background-color: #F27B1A;
 }

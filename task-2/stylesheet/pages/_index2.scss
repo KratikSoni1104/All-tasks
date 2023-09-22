@@ -137,3 +137,18 @@
     }
 }
 
+//---------------------------------------------------------------- BUTTONS ----------------------------------------------------------------//
+.buttons {
+    position: relative;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.proceed-btn  {
+    position: absolute;
+    top: .2rem;
+    left: 0;
+    background-color: #F27B1A !important;
+}
