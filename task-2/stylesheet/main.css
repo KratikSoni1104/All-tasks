@@ -275,7 +275,7 @@ td {
 }
 .terms__proceed-btn {
   padding: 1.15rem 3.65rem;
-  background-color: #F27B1A;
+  background-color: grey;
   display: inline-block;
   border-radius: 20px;
   text-decoration: none;
@@ -284,15 +284,10 @@ td {
   letter-spacing: 0.5px;
   margin-top: 3rem;
   text-transform: uppercase;
+  transition: all 0.2s;
 }
 .terms .term {
   display: flex;
-}
-.terms .term-checkbox {
-  margin-right: 1rem;
-}
-.terms .term-checkbox--1 {
-  margin-bottom: 1.1rem;
 }
 
 .switch {
@@ -358,4 +353,35 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 1.64rem;
+  height: 1.64rem;
+  background-color: #fff;
+  border: 0.75px solid #6E8CA6;
+  border-radius: 5px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-checkbox input[type=checkbox]:checked + .checkmark {
+  background-color: #f27b1a;
+  border-color: #f27b1a;
 }/*# sourceMappingURL=main.css.map */

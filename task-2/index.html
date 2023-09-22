@@ -147,28 +147,47 @@
 
                 <div class="terms">
                     <div class="term terms--1">
-                        <input type="checkbox" class="term-checkbox term-checkbox--1">
+                        <label class="custom-checkbox cc--1">
+                            <input type="checkbox" id="custom-checkbox1" onclick="handleProceed(event)">
+                            <span class="checkmark">
+                                <img src="images/tick.png" alt="tick img" class="checkmark-img">
+                            </span>
+                        </label>
                         <p class="term-desc f-11 l-16 para-col">I hereby agree to the <a href="#" class="semibold terms__anchor">Terms and Conditions</a> and authorize ICICI Bank to debit my savings account XXXX to validate my request for removal of dormancy in selected accounts</p>
                     </div>
                     <div class="term terms--2" >
-                        <input type="checkbox" class="term-checkbox term-checkbox--2">
+                        <label class="custom-checkbox cc--2">
+                            <input type="checkbox" id="custom-checkbox2" onclick="handleProceed(event)">
+                            <span class="checkmark">
+                                <img src="images/tick.png" alt="tick img" class="checkmark-img">
+                            </span>
+                        </label>
                         <p class="term-desc f-11 l-16 para-col">I understand that by clicking on proceed I authorize ICICI Bank to activate and link my accounts to User id - Shuklaret</p>
                     </div>
 
-                    <a href="#" class="terms__proceed-btn bold f-12 l-16">proceed</a>
+                    <a href="#" class="terms__proceed-btn bold f-12 l-16" id="proceed-btn">proceed</a>
                     <p class="terms__care f-11 l-22 para-col">If any account displayed above does not belong to you, Please contact <a href="#" class="semibold terms__anchor"> Customer Care</a> or visit branch.
                     </p>
                 </div>
             </div>
         </main>
 
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-
         <script>
 
+            function handleProceed(e) {
+                const c1 = document.getElementById("custom-checkbox1");
+                const c2 = document.getElementById("custom-checkbox2");
+                const btn = document.getElementById("proceed-btn");
+
+                if(c1.checked && c2.checked) {
+                    btn.style.backgroundColor='#F27B1A';
+                } else {
+                    btn.style.backgroundColor = 'grey';
+                    btn.style.cursor='disabled';
+                }
+            }
+            
+ 
             function toggleStatus(event) {
                 const checkbox = event.target;
                 const statusTextId = checkbox.id.replace('toggleCheckbox', 'statusText');
