@@ -70,7 +70,7 @@
                 </p>
 
                 <div class="card para-col">
-                    <p class="card__heading bold f-12 l-16">Grid Card</p>
+                    <p class="card__heading bold l-16">Grid Card</p>
 
                     <div class="card-box">
                         <img src="images/credit-card.png" alt="credit-card" class="card__img">
@@ -94,14 +94,46 @@
                     </div>
                 </div>
 
+                <div id="otp" class="otp para-col">
+                    <div class="otp__submit">
+                        <p class="otp__heading bold f-14 l-19 para-col">One Time Password</p>
+                        <div class="otp__submit__section">
+                            <input type="text" class="otp__submit__section-field f-12 l-18" placeholder="****">
+                            <img src="images/keyboard.png" alt="keyboard" class="otp__submit__section-img">
+                            <p class="otp__submit__section-para semibold f-12 l-16">
+                                OTP has been generated and sent to you registered mobile number
+                            </p>
+                        </div>
+                        <a href="#" class="otp-resend bold f-10">Resend OTP</a>
+                    </div>
+                    <div class="otp__read f-12 l-18">
+                        <p class="otp__read-p1">
+                            If there is a delay in receipt of OTP, you can send a request to revieve it. SMS IBOTP to 5676766 or 9215676766. Request should be sent from the mobile number registered in our records.
+                        </p>
+                        <p class="otp__read-p2 ">
+                            Please do not share OTP with anyone, even if a person claims to be an ICICI Bank official. For further details please <a href="#" class="bold">Click Here</a>
+                        </p>
+                    </div>
+                </div>
+
                 <div class="buttons bold l-16 f-12">
-                    <a href="#" id="otp-btn" class="btn otp-btn">send otp</a>
-                    <a href="#" class="btn back-btn">back</a>
+                    <a href="#otp" id="otp-btn" class="btn otp-btn" onclick="handleClick('send')">send otp</a>
+                    <a href="#" class="btn back-btn" onclick="handleClick('back')">back</a>
                 </div>
             </div>
         </main>
 
         <script>
+            function handleSend(clicked) {
+                const otp = document.getElementById('otp');
+                if(clicked === "send") {
+                    otp.style.display='block';
+                } else {
+                    otp.style.display='none';
+                }
+                
+            }
+
             function checkInput() {
                 const v1 = document.getElementById("input1").value;
                 const v2 = document.getElementById("input2").value;

@@ -87,3 +87,57 @@
     }
 }
 
+
+//---------------------------------------------------------------- OTP----------------------------------------------------------------//
+.otp {
+    margin-top: 3rem;
+    display: none;
+
+    &:target {
+        display: block;
+    }
+
+    &-resend {
+        font-family: Helvetica, sans-serif;
+        line-height: 1.15rem;
+        margin-left: 12rem;
+        color: #004A7F;
+    }
+
+    &__submit {
+
+        &__section {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            &-field {
+                margin-right: 1rem;
+                border:1px solid #6E8CA6;
+                border-radius: 7px;
+                padding: 6px 0 4px 11px;
+                outline: none;
+                width: 16.9rem;
+                
+            }
+
+            &-img {
+                margin-right: 1.5rem;
+            }
+        }
+
+    }
+
+    &__read {
+        margin-top: 2rem;
+        padding-right: 10.3rem;
+
+        &-p2 {
+            a {
+                color : #004A7F;
+            }
+        }
+    }
+}
+
