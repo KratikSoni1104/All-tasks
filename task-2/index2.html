@@ -122,7 +122,7 @@
                     <!-- <button class="btn otp-btn">send otp</button> -->
                     <a href="#otp" id="otp-btn" class="btn otp-btn" onclick="handleClick('send')">send otp</a>
                     <a href="index3.html" id="proceed-btn" class="btn proceed-btn">proceed</a>
-                    <a href="#" class="btn back-btn" onclick="handleClick('back')">back</a>
+                    <a href="index.html" id="back-btn" class="btn back-btn" onclick="handleClick('back')">back</a>
                 </div>
             </div>
         </main>
@@ -153,15 +153,21 @@
                 const otp = document.getElementById('otp');
                 const btn = document.getElementById('otp-btn');
                 const pBtn = document.getElementById('proceed-btn');
+                const backButton = document.getElementById('back-btn');
 
                 if(clicked === "send") {
                     otp.style.display='block';
                     btn.style.zIndex='-1';
+                    backButton.setAttribute('href','#');
                     
                 } else if(clicked === "back") {
                     otp.style.display='none';
                     btn.style.zIndex='10';
                     pBtn.style.pointerEvents='none';
+
+                    setTimeout(() => {
+                        backButton.setAttribute('href','index.html');
+                    } , 1000);
                 }
                 
             }

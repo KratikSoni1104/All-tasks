@@ -171,16 +171,14 @@ body {
 
 .top {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
 .top-paragraph {
-  display: inline-block;
   margin-left: 2rem;
   color: var(--para);
 }
 .top-link {
-  margin-top: 0.9rem;
   color: #004A7F;
 }
 
@@ -517,7 +515,7 @@ input:checked + .slider:before {
 }
 
 .custom-checkbox {
-  display: inline-block;
+  display: -webkit-inline-box;
   align-items: center;
   cursor: pointer;
   -webkit-user-select: none;

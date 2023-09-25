@@ -30,15 +30,13 @@
 // ------------------------------------------------   top-section  ---------------- --------------------------------    //
 .top {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     &-paragraph {
-        display: inline-block;
         margin-left: 2rem;
         color : var(--para);
     }
     &-link {
-        margin-top: 0.9rem;
         color: #004A7F;
     }
 }
