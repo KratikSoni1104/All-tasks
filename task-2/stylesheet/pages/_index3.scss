@@ -25,37 +25,16 @@
 
 //---------------------------------------------------------------- content ---------------------------------------------------------------- PROCESS --------------------------------//
 .progress {
-    margin: 2rem 8.5rem 3rem 10.5rem;
-    position: relative;
+    text-align: center;
+    margin: 2rem 0 3rem;
+    padding:0 8.5rem 0 10.5rem;
     &__request {
         display: flex;
         justify-content: space-between;
-        text-align: center;
     }
 
     &__line {
-        
-        &-icon {
-            &--1 {
-                position: absolute;
-                top: 5.4rem;
-                left: 5.5rem;
-                z-index: 10;
-            }
-            &--2 {
-                position: absolute;
-                top: 5.4rem;
-                right: 7.3rem;
-                z-index: 10;
-            }
-        }
-
-        &-progress {
-            position: absolute;
-            top: 6.9rem;
-            left: 6.8rem;
-            z-index: 5;
-        }
+        margin-top: 1rem;
     }
 
     &__button {
@@ -63,8 +42,7 @@
     }
 
     &__para {
-        margin-top: 5.5rem;
-        text-align: center;
+        margin-top: 2rem;
     }
 }
 

@@ -8,11 +8,12 @@
     max-width: 96rem;
     margin: 0 auto;
     position: relative;
+    box-sizing: border-box;
+    padding: 2.2rem 12rem 0;
 }
 
 // ------------------------------------------------   header  ---------------- --------------------------------    //
 .header {
-    box-sizing: content-box;
     height: 5.9rem;
     border-bottom: 5rem solid transparent;
     border-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
@@ -28,28 +29,23 @@
 
 // ------------------------------------------------   top-section  ---------------- --------------------------------    //
 .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     &-paragraph {
         display: inline-block;
-        margin-top: 2.2rem;
-        margin-left: 14rem;
+        margin-left: 2rem;
         color : var(--para);
     }
     &-link {
-        position: absolute;
-        top: 3.1rem;
-        right: 12rem;
+        margin-top: 0.9rem;
         color: #004A7F;
-    }
-    &-img {
-        position: absolute;
-        top: 3.1rem;
-        right: 12rem;
     }
 }
 
 // ------------------------------------------------ Process 
 .process {
-    margin: 2.8rem 12rem 0;
+    margin: 2.8rem 0 0;
     position: relative;
     
      
@@ -100,7 +96,7 @@
 
 //---------------------------------------------------------------- CONTENT ----------------------------------------------------------------//
 .content {
-    margin: 1.6rem 12rem 0;
+    margin: 1.6rem 0 0;
     padding: 2rem 2rem;
     border: .5px solid #CFD7ED;
     border-radius: 10px;
@@ -178,6 +174,8 @@ td {
     &__proceed-btn {
         cursor: not-allowed;
         margin-top: 3rem;
+        background-color: #C4C4C4;
+        pointer-events: none;
     }
 
     .term {

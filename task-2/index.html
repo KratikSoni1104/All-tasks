@@ -15,8 +15,11 @@
             <img src="images/icici-logo.png" alt="logo image" class="header__logo">
         </header>
         <main class="container">
-            <p class="top-paragraph f-18 l-24 bold">Link all your accounts</p>
-            <a href="#" class="top-link f-12 bold l-18">Remind Me Later</a>
+            <div class="top">
+                <p class="top-paragraph f-18 l-24 bold">Link all your accounts</p>
+                <a href="#" class="top-link f-12 bold l-18">Remind Me Later</a>
+            </div>
+            
             
             <div class="process">
                 <img src="images//process-step-icon-1.png" alt="process-step" class="process__step-icon--1">
@@ -150,7 +153,7 @@
                         <label class="custom-checkbox cc--1">
                             <input type="checkbox" id="custom-checkbox1" onclick="handleProceed(event)">
                             <span class="checkmark">
-                                <img src="images/tick.png" alt="tick img" class="checkmark-img">
+                                <img src="images/tick.svg" alt="tick img" class="checkmark-img">
                             </span>
                         </label>
                         <p class="term-desc f-11 l-16 para-col">I hereby agree to the <a href="#" class="semibold terms__anchor">Terms and Conditions</a> and authorize ICICI Bank to debit my savings account XXXX to validate my request for removal of dormancy in selected accounts</p>
@@ -159,7 +162,7 @@
                         <label class="custom-checkbox cc--2">
                             <input type="checkbox" id="custom-checkbox2" onclick="handleProceed(event)">
                             <span class="checkmark">
-                                <img src="images/tick.png" alt="tick img" class="checkmark-img">
+                                <img src="images/tick.svg" alt="tick img" class="checkmark-img">
                             </span>
                         </label>
                         <p class="term-desc f-11 l-16 para-col">I understand that by clicking on proceed I authorize ICICI Bank to activate and link my accounts to User id - Shuklaret</p>
@@ -183,8 +186,10 @@
                     btn.style.backgroundColor='#F27B1A';
                     btn.style.cursor='pointer';
                     btn.classList.add('disabled');
+                    btn.style.pointerEvents='auto';
                 } else {
-                    btn.style.backgroundColor = 'grey';
+                    btn.style.pointerEvents='none';
+                    btn.style.backgroundColor = '#C4C4C4';
                     btn.style.cursor='not-allowed';
                     btn.classList.remove('disabled');
                 }

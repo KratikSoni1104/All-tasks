@@ -148,7 +148,7 @@
 
 .proceed-btn  {
     position: absolute;
-    top: .2rem;
+    top: .15rem;
     left: 0;
-    background-color: #F27B1A !important;
+    pointer-events: none;
 }

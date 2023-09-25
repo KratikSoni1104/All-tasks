@@ -15,8 +15,10 @@
             <img src="images/icici-logo.png" alt="logo image" class="header__logo">
         </header>
         <main class="container">
-            <p class="top-paragraph f-18 l-24 bold">Link all your accounts</p>
-            <a href="#" class="top-link f-12 bold l-18">Remind Me Later</a>
+            <div class="top">
+                <p class="top-paragraph f-18 l-24 bold">Link all your accounts</p>
+                <a href="#" class="top-link f-12 bold l-18">Remind Me Later</a>
+            </div>
             
             <div class="process">
                 <img src="images/procees-complete-icon.png" alt="process-step" class="process__step-icon--1">
@@ -80,15 +82,15 @@
                         <div class="card__details f-14 bold l-19">
                             <div class="card__details__box--1">
                                 <span>C</span>
-                                <input type="text" id="input1" class="card__details-input" oninput="checkInput()">
+                                <input type="text" id="input1" onkeyup="moveToNextField(this, 'input2')" class="card__details-input" oninput="checkInput()" maxlength="1">
                             </div>
                             <div class="card__details__box--2">
                                 <span>K</span>
-                                <input type="text" id="input2" class="card__details-input" oninput="checkInput()">
+                                <input type="text" id="input2" onkeyup="moveToNextField(this, 'input3')" class="card__details-input" oninput="checkInput()" maxlength="1">
                             </div>
                             <div class="card__details__box--3">
                                 <span>O</span>
-                                <input type="text" id="input3" class="card__details-input" oninput="checkInput()">
+                                <input type="text" id="input3" onkeyup="moveToNextField(this, 'otp-btn')" class="card__details-input" oninput="checkInput()" maxlength="1">
                             </div>
                         </div>
                     </div>
@@ -98,7 +100,7 @@
                     <div class="otp__submit">
                         <p class="otp__heading bold f-14 l-19 para-col">One Time Password</p>
                         <div class="otp__submit__section">
-                            <input type="text" class="otp__submit__section-field f-12 l-18" placeholder="****">
+                            <input autocomplete="off" type="text" id="otp-input" maxlength="4" class="otp__submit__section-field f-12 l-18" placeholder="****">
                             <img src="images/keyboard.png" alt="keyboard" class="otp__submit__section-img">
                             <p class="otp__submit__section-para semibold f-12 l-16">
                                 OTP has been generated and sent to you registered mobile number
@@ -117,7 +119,8 @@
                 </div>
 
                 <div class="buttons bold l-16 f-12">
-                    <a href="#" id="otp-btn" class="btn otp-btn" onclick="handleClick('send')">send otp</a>
+                    <!-- <button class="btn otp-btn">send otp</button> -->
+                    <a href="#otp" id="otp-btn" class="btn otp-btn" onclick="handleClick('send')">send otp</a>
                     <a href="index3.html" id="proceed-btn" class="btn proceed-btn">proceed</a>
                     <a href="#" class="btn back-btn" onclick="handleClick('back')">back</a>
                 </div>
@@ -125,9 +128,31 @@
         </main>
 
         <script>
+
+            var otpInput = document.getElementById('otp-input');
+            var otpBtn = document.getElementById('proceed-btn');
+
+            otpInput.addEventListener('input', () => {
+                if(otpInput.value.length === 4) {
+                    otpBtn.style.backgroundColor='#F27B1A';
+                } else {
+                    otpBtn.style.backgroundColor='#C4C4C4';
+                    otpBtn.style.pointerEvents='auto';
+                }
+            })
+
+            function moveToNextField(currentField,nextFieldId) {
+                var currentFieldLength = currentField.value.length;
+
+                if(currentFieldLength === 1) {
+                    document.getElementById(nextFieldId).focus();
+                }
+            }
+
             function handleClick(clicked) {
                 const otp = document.getElementById('otp');
                 const btn = document.getElementById('otp-btn');
+                const pBtn = document.getElementById('proceed-btn');
 
                 if(clicked === "send") {
                     otp.style.display='block';
@@ -135,7 +160,8 @@
                     
                 } else if(clicked === "back") {
                     otp.style.display='none';
-                    
+                    btn.style.zIndex='10';
+                    pBtn.style.pointerEvents='none';
                 }
                 
             }
@@ -149,7 +175,7 @@
                 if(v1 !== "" && v2!== "" && v3 !== "") {
                     btn.style.backgroundColor = "#F27B1A";
                     btn.style.cursor='pointer';
-                    btn.classList.add('disabled');
+                    btn.style.pointerEvents='auto';
                 } else {
                     btn.style.backgroundColor = "#C4C4C4";
                     btn.style.cursor='not-allowed';
