@@ -1,0 +1,203 @@
+//--------------------------------------------------- CONTAINER -----------------------------------//
+.container {
+
+    &__r {
+
+        &-2 {
+            min-width: 50%;
+            
+        }
+        
+        &-head {
+            &-2 {
+                padding-top: 5.23rem;
+            }
+
+            &--1 {
+                margin-bottom: .6rem;
+            }
+
+            &--2 {
+                margin-bottom: 1.1rem;
+            }
+        }
+
+        &__search {
+            margin-top: 3.6rem;
+        }
+
+        &-para {
+            margin-top: 5rem;
+        }
+
+        &-queries {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        &__view-more {
+            margin-top: 1.96rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__l {
+        
+        &-2 {
+            min-width: 50%;
+            padding-left: 5.05rem;
+            position: relative;
+        }
+
+        &__heading {
+            color: #F67C0B;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            padding-top: 5.3rem;
+
+            img {
+                margin-right: 0.7rem;
+            }
+        }
+
+        &-timeImg {
+            position: absolute;
+            top: 0;
+            right: 3.3rem;
+        }
+
+        &__product-card {
+            padding-left: 1.46rem;
+            border: 0.71px solid #CD6200;
+            background-color: #FEF3E8;
+            display: inline-block;
+            margin-top: 1.7rem;
+            border-radius: 3.55px;
+
+            &-img {
+                padding: 1.42rem 7.54rem 0 0;
+            }
+
+            &-name {
+                padding: 1.2rem 0 1.18rem 0;
+                color: #CD6200;
+            }
+        }
+
+        &__product-types {
+            display: grid;
+            grid-template-columns: repeat(4 , 13.9rem);
+            grid-template-rows: repeat(2 , auto);
+            column-gap: 1rem;
+            row-gap: 4.1rem;
+            margin-top: 2rem;
+            color : #894302;
+
+            &-navigate {
+                position: absolute;
+                bottom: -11px;
+                right: -9px;
+            }
+
+            &--1, &--2, &--3, &--4, &--5, &--6, &--7,&--8, &--9, &--10 {
+                position: relative;
+                padding: 1.7rem 0 0 1.6rem;
+                border: 1px solid #FC983C33;
+                box-shadow: 0px 2px 8px 0px #00000014;
+                background-color: #FFB571;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &-name {
+                    font-size: 18px;
+                    line-height: 25px;
+                    padding-bottom: 3.36rem;
+                }
+            }
+
+            &--1 {
+                &-img {
+                    margin-bottom: 1.62rem;
+                }
+                &-name {
+                    padding-right: 3.9rem;
+                }
+            }
+            &--2 {
+                &-img {
+                    margin-bottom: 1.98rem;
+                }
+                &-name {
+                    padding-right: 6.2rem;
+                }
+            }
+            &--3 {
+                &-img {
+                    margin-bottom: 2.6rem;
+                }
+                &-name {
+                    padding-right: 2.8rem;
+                }
+            }
+            &--4 {
+                &-img {
+                    margin-bottom: 2.52rem;
+                }
+                &-name {
+                    padding-right: 7.1rem;
+                }
+            }
+            &--5 {
+                &-img {
+                    margin-bottom: 1.62rem;
+                } 
+                &-name {
+                    padding-right: 6.9rem;
+                }
+            }
+            &--6 {
+                &-img {
+                    margin-bottom: 1.62rem;
+                } 
+                &-name {
+                    padding-right: 3.7rem;
+                }
+            }
+            &--7 {
+                &-img {
+                    margin-bottom: 1.03rem;
+                }
+                &-name {
+                    padding-right: 1.5rem;
+                }
+            }
+            &--8 {
+                &-img {
+                    margin-bottom: 2.1rem;
+                }
+                &-name {
+                    padding-right: 1.6rem;
+                }
+            }
+            &--9 {
+                &-img {
+                    margin-bottom: 2.25rem;
+                }
+                &-name {
+                    padding-right: 5.3rem;
+                }
+            }
+            &--10 {
+                &-img {
+                    margin-bottom: 2rem;
+                }
+                &-name {
+                    padding-right: 5.6rem;
+                }
+            }
+            
+        }
+    }
+}

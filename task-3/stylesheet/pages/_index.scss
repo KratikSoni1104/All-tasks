@@ -53,7 +53,7 @@
             &-input {
                 padding: 2.98rem 0 2.9rem 5.5rem;
                 box-sizing: border-box;
-                width: 678px;
+                width: 67.8rem;
                 color: #8B8B8B;
                 border: none;
                 outline: none;
@@ -97,8 +97,8 @@
             margin-top: 2rem;
             grid-template-columns: 31.2rem auto;
             grid-template-rows: repeat(2 , auto);
-            row-gap: 1.86rem;
-            column-gap: 1.2rem;
+            row-gap: 1.2rem;
+            column-gap: 1.86rem;
 
             &--1, &--2, &--3, &--4 {
                 max-width: max-content;
