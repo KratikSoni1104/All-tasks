@@ -1,0 +1,215 @@
+// ---------------------------------------------------------------- HEADER ----------------------------------------------------------------//
+.header {
+    height: 6.5rem;
+    border-bottom: 5rem solid transparent;
+    border-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    border-image-slice: 1;
+
+    &__logo {
+        padding: 1.8rem 0 1.9rem 4rem;
+    }
+}
+
+// ---------------------------------------------------------------- CONTAINER ----------------------------------------------------------------//
+.container {
+    max-width: 128rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    
+    &__right {
+        box-sizing: border-box;
+        max-width: 79.8rem;
+        padding-left: 6rem;
+        background-color: #FFF2E3;
+        position: relative;
+
+        &-img {
+            position: absolute;
+            top: 2.6rem;
+        }
+
+        &-head {
+            display: inline-block;
+            padding-right: 2rem;
+            padding-top: 9.71rem;
+            &--1 {
+                margin-bottom: 1.2rem;
+            }
+            &--2 {
+                margin-bottom: 1.8rem;
+            }
+            &--3 {
+
+            }
+        }
+
+        &__search {
+            margin-top: 4.4rem;
+            max-width: 67.8rem;
+            display: flex;align-items: center;
+            padding-right: 6rem;
+            
+            &-input {
+                padding: 2.98rem 0 2.9rem 5.5rem;
+                box-sizing: border-box;
+                width: 678px;
+                color: #8B8B8B;
+                border: none;
+                outline: none;
+                line-height: 2.2rem;
+                background-color: #FFFFFF;
+                box-shadow: 0px 10px 20px 0px rgba(248, 111, 0, 0.15);
+                border-radius: 5px;
+                border: 1px solid rgba(242, 228, 214, 1);
+                margin-right: -21.5rem;
+                margin-left: -4.1rem;
+
+                
+            }
+
+            &-icon {
+                z-index: 2;
+                margin-left: 2rem;
+            }
+
+            &-button {
+                border:none;
+                color: #FFFFFF;
+                padding: 1.8rem 6.8rem;
+                border-radius: 5px;
+                background-color: #F3831D;
+                text-transform: uppercase;
+                text-align: center;
+                margin-right: 1.3rem;
+                letter-spacing: 1px;
+            }
+        }
+
+        
+        &-para {
+            margin-top: 4rem;
+            letter-spacing: 0.2px;  
+        }
+
+        &-queries {
+            display: grid;
+            margin-top: 2rem;
+            grid-template-columns: 31.2rem auto;
+            grid-template-rows: repeat(2 , auto);
+            row-gap: 1.86rem;
+            column-gap: 1.2rem;
+
+            &--1, &--2, &--3, &--4 {
+                max-width: max-content;
+            }
+        }
+
+        &__view-more {
+            color: #004A7F;
+            margin-top: 1.3rem;
+            margin-left: 3rem;
+            margin-right: 0.7rem;
+            padding-bottom: 11rem;
+        }
+    }
+
+    &__left {
+        background-color: #fff;
+        
+        //height: 50rem;
+
+        &__heading {
+            letter-spacing: 0.2px;
+            padding: 5rem 0 0 5.2rem;
+        }
+
+        &__products {
+            display: grid;
+            grid-template-columns: repeat(2 , 17.5rem);
+            grid-template-rows: repeat(2 , auto);
+            column-gap: 2.4rem;
+            row-gap: 2.5rem;
+            margin: 2.5rem 5.46rem 0 5.3rem;
+
+            &-img {
+                &--1 {
+                    margin-bottom: 2.98rem;
+                }
+                &--2 {
+                    margin-bottom: 3.1rem;
+                }
+                &--3 {
+                    margin-bottom: 3.81rem;
+                }
+                &--4 {
+                    margin-bottom: 0.9rem;
+                }
+            }
+            
+            &-navigate {
+                position: absolute;
+                bottom: -1.2rem;
+                right: -.8rem;
+                display: inline-block;
+            }
+
+            &-name {
+                font-size: 2rem;
+                line-height: 2.72rem;
+            }
+
+            &-desc {
+                font-size: 1.2rem;
+                line-height: 1.63rem;
+                color:#8B8B8B;
+                padding: 0 2.7rem 2.5rem 0;
+            }
+
+            &--1,&--2,&--3,&--4 {
+                padding: 2.4rem 0 0 2.53rem;
+                box-shadow: 0px 2px 8px 0px #00000014;
+                border-radius: 5px;
+                position: relative;
+                cursor: pointer;
+            }
+
+            &--1 {
+                border: 1px solid #007A4033;
+            }
+            &--2 {
+                border: 1px solid #CD620033;
+            }
+            &--3 {
+                border: 1px solid #B248B533;
+            }
+            &--4 {
+                border: 1px solid #6D4DEE33;
+            }
+        }
+    }
+}
+
+//---------------------------------------------------------------- QUERY SECTION ----------------------------------------------------------------//
+
+.query {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #004A7F;
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 1.6rem;
+    }
+}
+
+.ans {
+font-size: 10px;
+font-style: italic;
+line-height: 14px;
+margin-left: 3rem;
+
+}
+
