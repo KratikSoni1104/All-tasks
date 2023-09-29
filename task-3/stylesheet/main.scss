@@ -8,12 +8,14 @@
 @import "pages/index";
 @import "pages/index2";
 @import "pages/index3";
+@import "pages/index4";
 
 //abstract
 @import "abstract/mixin";
 
 //components
 @import "components/popup";
-// @import "components/toogle";
+@import "components/number";
+@import "components/info";
 // @import "components/checkbox";
 // @import "components/button";

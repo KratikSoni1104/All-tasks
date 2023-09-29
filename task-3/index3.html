@@ -17,16 +17,199 @@
         <main class="container">
             <div class="contaier__right container__r-3">
                 <div class="container__r__content">
+                    <img src="images/v-line.png" alt="vertical line" class="container__r-line">
                     <div class="container__r__content__back">
                         <img src="images/left-arrow.svg" alt="left arrow" class="container__r__content__back-img mr-6">
-                        <span class=" container__r__content__back-text f-14 l-19 ls-p2 semibold">Back</span>
+                        <a href="index2.html" class="container__r__content__back-text f-14 l-19 ls-p2 semibold">Back</a>
+                    </div>
+
+                    <div class="container__r__content__process mt-16">
+                        <div class="container__r__content__process-head para-col">
+                            <span class="container__r__content__process-head-img">
+                                <img src="images/personal-loan.svg" alt="personal - loan" class="container__r__content__process-head-img-1">
+                            </span>
+                            <div class="container__r__content__process-head-text">
+                                <p class="container__r__content__process-head-text--1 f-22 l-21 m-12">
+                                    Get your
+                                </p>
+                                <p class="container__r__content__process-head-text--2 bold f-30 l-21 ls-p1 m-18">
+                                    loan approved against shares
+                                </p>
+                                <p class="container__r__content__process-head-text--3 f-22 l-21 m-17">
+                                    in 5 simple steps️
+                                </p>
+                                <img src="images/watch-icon.svg" alt="watch" class="container__r__content__process-head-img2">
+                            </div>
+                        </div>
+                        <div class="container__r__content__process-steps pl-16 mt-21 para-col">
+                            <div class="container__r__content__process-steps--1">
+                                <span class="container__r__content__process-steps--1-num number-shape">1</span>
+                                <p class="container__r__content__process-steps--1-text">Necessary information to get you started</p>
+                            </div>
+                            <div class="container__r__content__process-steps--2">
+                                <span class="container__r__content__process-steps--2-num number-shape">2</span>
+                                <p class="container__r__content__process-steps--2-text">Loan details</p>
+                            </div>
+                            <div class="container__r__content__process-steps--3">
+                                <span class="container__r__content__process-steps--3-num number-shape">3</span>
+                                <p class="container__r__content__process-steps--3-text">Additional information</p>
+                            </div>
+                            <div class="container__r__content__process-steps--4">
+                                <span class="container__r__content__process-steps--4-num number-shape">4</span>
+                                <p class="container__r__content__process-steps--4-text">FATCA declaration</p>
+                            </div>
+                            <div class="container__r__content__process-steps--5">
+                                <span class="container__r__content__process-steps--5-num number-shape">5</span>
+                                <p class="container__r__content__process-steps--5-text">Loan Summary and Auto Debit</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
             <div class="container__left container__l-3">
+                <img src="images/number-line.png" alt="number-line" id="v-line" class="container__l__number-line d-none">
+                <img src="images/num-verify-icon.svg" alt="number-verified" class="container__l__num-verify-icon d-none" id="num-verified">
+                <p class="container__l__top-para pr-123 para-col semibold f-16 l-26 m-20" id="para-1">
+                    Let’s begin with some necessary information
+                    and get you started
+                </p>
+                <div class="container__l__top-para2 d-none" id="para-2">
+                    <p class="text f-14 l-16 para-col mr-5 m-10 d-ib">Mobile number</p>
+                    <img src="images/phone-icon.svg" alt="phone" class="img d-ib">
+                </div>
 
+                <div class="container__l__box para-col">
+                    <div class="container__l__box__number">
+                        <span class="container__l__box__number-code f-16 l-26 px-26 py-17">+91</span>
+                        <input type="text" class="container__l__box__number-text f-16 l-16" id="number" oninput="checkNumber()" placeholder="Enter your mobile number">
+                    </div>
+
+                    <div class="container__l__box__email d-none mt-56" id="email">
+                        <div class="container__l__box__email-top">
+                            <span class="email-head d-ib f-14 l-16 mr-12 pb-10">Email</span>
+                            <img src="images/email.svg" alt="email" class="email-img">
+                        </div>
+                        <input type="email" id="email-input" placeholder="Enter your email id" class="email-input f-16 l-16" oninput="checkEmailValidity()">
+                    </div>
+
+                    <a href="#" class="container__l__box__number-sendOtp bold f-14 l-19 ls-1 m-12" id="num-otp" onclick="handleNumberOtpClick()">send otp</a>
+                    <p class="container__l__box__number-otpInst f-12 l-19 i pr-294 d-none" id="otp-inst">OTP will be sent to sent to the mobile number specified above</p>
+
+                    <div class="container__l__box__enter-otp d-none para-col mt-53" id="enter-otp">
+                        <div class="container__l__box__enter-otp-top">
+                            <p class="inst f-14 l-16 m-10">Enter OTP</p>
+                            <div class="detail m-4">
+                                <p class="time mr-4 f-500 f-14 l-28">1:59</p>
+                                <p class="time-text mr-5 f-12 l-22">seconds to</p>
+                                <p class="resend mr-5 semibold f-12 l-28">Resend OTP</p>
+                                <img src="images/grey-right-arrow.svg" alt="right arrow" class="right-arrow">
+                            </div>
+                        </div>
+                        <div class="container__l__box__enter-otp-bottom">
+                            <input type="text" class="container__l__box__enter-otp-bottom-input--1" id="input1" onkeyup="moveToNextField(this, 'input2') ; checkOtp()">
+                            <input type="text" class="container__l__box__enter-otp-bottom-input--2" id="input2" onkeyup="moveToNextField(this, 'input3') ; checkOtp()">
+                            <input type="text" class="container__l__box__enter-otp-bottom-input--3" id="input3" onkeyup="moveToNextField(this, 'input4') ; checkOtp()">
+                            <input type="text" class="container__l__box__enter-otp-bottom-input--4" id="input4" onkeyup="moveToNextField(this, 'input2') ; checkOtp()">
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
+
+        <script>
+            function checkEmailValidity() {
+                console.log("hello");
+                const email = document.getElementById('email-input');
+                const otpText = document.getElementById('otp-inst');
+                const btn = document.getElementById('num-otp');
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if(emailPattern.test(email.value)) { 
+                    otpText.textContent='OTP will be sent to sent to the email ID specified above';
+                    otpText.classList.remove('d-none');
+                    btn.style.backgroundColor='#F3831D';
+                } else {
+                    otpText.textContent='OTP will be sent to sent to the mobile number specified above';
+                    otpText.classList.add('d-none');
+                    btn.style.backgroundColor='#C4C4C4';
+                }
+            }
+
+            function handleNumberOtpClick() {
+                const btn = document.getElementById('num-otp');
+                const otpText = document.getElementById('otp-inst');
+                const p1 = document.getElementById('para-1');
+                const p2 = document.getElementById('para-2');
+                const vLine = document.getElementById('v-line');
+
+                btn.classList.add('dnone' , 'dn');
+                otpText.classList.add('d-none');
+                enterOtp.classList.remove('d-none');
+                p1.classList.add('d-none');
+                p2.classList.remove('d-none');
+                vLine.classList.remove('d-none');
+            }
+
+           const enterOtp = document.getElementById('enter-otp'); function moveToNextField(currentField , nextFieldId) {
+                const nextInput = document.getElementById(nextFieldId);
+                if(currentField.value.length === 1) {
+                    nextInput.focus();
+                }
+            }
+
+            function checkOtp() {
+                const i1 = document.getElementById('input1');
+                const i2 = document.getElementById('input2');
+                const i3 = document.getElementById('input3');
+                const i4 = document.getElementById('input4');
+                const email = document.getElementById('email');
+                const enterOtp = document.getElementById('enter-otp');
+                const btn = document.getElementById('num-otp');
+                const verify = document.getElementById('num-verified');
+
+
+                if(email.classList.contains('d-none')) {
+                    if(i1.value !== "" && i2.value !=="" && i3.value !=="" && i4.value !=="") {
+                        email.classList.remove('d-none');
+                        btn.classList.remove('dnone' , 'dn');
+                        btn.style.backgroundColor="#C4C4C4";
+                        enterOtp.classList.add('d-none');
+                        verify.classList.remove('d-none');
+
+                        // Reset the input values
+                        i1.value = "";
+                        i2.value = "";
+                        i3.value = "";
+                        i4.value = "";
+                    } else {
+                        email.classList.add('d-none');
+                        verify.classList.add('d-none');
+                    }
+                } else {
+                    if(i1.value !== "" && i2.value !=="" && i3.value !=="" && i4.value !=="") {
+                        window.location.href='index4.html';
+                    }
+                }
+
+                
+            }
+
+            function checkNumber() {
+                const num = document.getElementById("number");
+                const btn = document.getElementById('num-otp');
+                const otpText = document.getElementById('otp-inst');
+
+                if (num.value.length === 10) {
+                    btn.style.backgroundColor="#F3831D";
+                    otpText.classList.remove('d-none');
+                } else {
+                    btn.style.backgroundColor="#C4C4C4";
+                    otpText.classList.add('d-none');
+                }
+
+            }
+        </script>
     </body>
 </html>

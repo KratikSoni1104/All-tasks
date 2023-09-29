@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+
+        <link rel="stylesheet" href="stylesheet/main.css">
+        <!-- <style>
+            body {
+                background-color: rgba(252, 252, 252, 1);
+            }
+            .header {
+                border-image-slice: 0;
+            }
+        </style> -->
+        <title>Task 3</title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="images/icici-logo.svg" alt="logo image" class="header__logo">
+        </header>
+        <main class="container">
+            <div class="contaier__right container__r-3 container__r-4">
+                <div class="container__r__content">
+                    <img src="images/v-line2.png" alt="vertical line" class="container__r-line">
+                    <div class="container__r__content__back">
+                        <img src="images/left-arrow.svg" alt="left arrow" class="container__r__content__back-img mr-6">
+                        <a href="index3.html" class="container__r__content__back-text f-14 l-19 ls-p2 semibold">Back</a>
+                    </div>
+
+                    <div class="container__r__content__process mt-16">
+                        <div class="container__r__content__process-head para-col">
+                            <span class="container__r__content__process-head-img">
+                                <img src="images/personal-loan.svg" alt="personal - loan" class="container__r__content__process-head-img-1">
+                            </span>
+                            <div class="container__r__content__process-head-text">
+                                <p class="container__r__content__process-head-text--1 f-22 l-21 m-12">
+                                    Get your
+                                </p>
+                                <p class="container__r__content__process-head-text--2 bold f-30 l-21 ls-p1 m-18">
+                                    loan approved
+                                </p>
+                                <p class="container__r__content__process-head-text--3 f-22 l-21 m-17">
+                                    in 5 simple steps️
+                                </p>
+                                <img src="images/watch-icon.svg" alt="watch" class="container__r__content__process-head-img2">
+                            </div>
+                        </div>
+                        <div class="container__r__content__process-steps pl-16 mt-21 para-col">
+                            <div class="container__r__content__process-steps--1">
+                                <span class="container__r__content__process-steps--1-num number-shape">1</span>
+                                <p class="container__r__content__process-steps--1-text">Necessary information to get you started</p> 
+                            </div>
+                            <div class="info">
+                                <div class="info__inside m-14">
+                                    <div class="info__inside-left">
+                                        <img src="images/num-verify-icon.svg" alt="verify-icon" class="info-img mr-10">
+                                        <p class="info-text f-14 l-16 mr-20">Mobile number  <span class="bold">+91- 9876 635 987</span> </p>
+                                    </div>
+                                    <img src="images/edit-icon.svg" alt="edit-icon" class="info-edit">
+                                </div>
+                                <div class="info__inside">
+                                    <div class="info__inside-left">
+                                        <img src="images/num-verify-icon.svg" alt="verify-icon" class="info-img mr-10">
+                                        <p class="info-text f-14 l-16 mr-20">Email ID  <span class="bold">vipin@gmail.com</span></p>
+                                    </div>
+                                    <img src="images/edit-icon.svg" alt="edit-icon" class="info-edit">
+                                </div>
+                            </div>
+                            <div class="container__r__content__process-steps--2 opac-steps">
+                                <span class="container__r__content__process-steps--2-num number-shape">2</span>
+                                <p class="container__r__content__process-steps--2-text">Loan details</p>
+                            </div>
+                            <div class="container__r__content__process-steps--3 opac-steps">
+                                <span class="container__r__content__process-steps--3-num number-shape">3</span>
+                                <p class="container__r__content__process-steps--3-text">Additional information</p>
+                            </div>
+                            <div class="container__r__content__process-steps--4 opac-steps">
+                                <span class="container__r__content__process-steps--4-num number-shape">4</span>
+                                <p class="container__r__content__process-steps--4-text">FATCA declaration</p>
+                            </div>
+                            <div class="container__r__content__process-steps--5 opac-steps">
+                                <span class="container__r__content__process-steps--5-num number-shape">5</span>
+                                <p class="container__r__content__process-steps--5-text">Loan Summary and Auto Debit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container__left container__l-4">
+                
+                <div class="user">
+                    <div class="user__email f-20 l-18">
+                        <span class="">vipin@gmail.com</span>
+                        <img src="images/num-verify-icon.svg" alt="verify">
+                    </div>
+                    <img src="images/number-line.png" alt="v-line" class="user__v-line m-9">
+
+                    <div class="user__pan" >
+                        <div class="user__pan-top">
+                            <span class="user__pan-head d-ib f-14 l-16 m-10 mr-5">PAN Card</span>
+                            <img src="images/pan.svg" alt="pan" class="user__pan-img">
+                        </div>
+                        <input type="text" placeholder="Enter PAN number" class="user__pan-input f-16 l-16" id="input" oninput="check()">
+                    </div>
+                </div>
+
+                <div class="terms">
+                    <label class="terms-label mr-13">
+                        <input type="checkbox" class="terms-input d-none" id="checkbox" oninput="check()">
+                        <span class="terms-checkmark">
+                            <img src="images/checkbox-tick.svg" alt="tick" class="terms__checkmark-tick">
+                        </span>
+                    </label>
+                    
+                    <p class="terms-text f-14 l-21">
+                        I hereby consent to receive and authorize the Bank and its affiliates/ group companies to reach me/send any communication pertaining to my Account / Card / Loan / Investment and related services/facilities/special offers, or any other relationship held by me with the Bank, or in relation to various products, offers and services provided by ICICI Bank /its group companies, through registered e-mail, phone, SMS, WhatsApp messaging, or any other electronic mode or other messaging or social media platforms. ICICI Bank will be sending One Time Pin (OTP) on the abovementioned mobile number. This consent will override any registration for DND/DNC registered with ICICI Bank with respect to Account / Card / Loan / Investment / any other relationship with ICICI Bank and any other services/facilities/offers offered by ICICI Bank. I understand and agree that the email provider /WhatsApp or any other service provider can review/monitor the contents shared/communicated through email provider/WhatsApp or other service provider. I understand that such electronic mode of communication(s) are subject to the terms and conditions of the respective service provider and agree to comply with the terms of use of email/ WhatsApp, SMS, or any other electronic mode, as applicable and updated/modified by the service provider from time to time
+                    </p>
+                </div>
+
+                <a href="#" class="authenticate bold d-ib f-14 l-19 l-1" id="auth">Authenticate</a>
+
+            </div>
+        </main>
+
+        <script>
+            function check() {
+                const input = document.getElementById('input');
+                const check = document.getElementById('checkbox');
+                const btn = document.getElementById('auth');
+
+                if(checkbox.checked && input.value !== "") {
+                    btn.style.backgroundColor='#F3831D';
+                } else {
+                    btn.style.backgroundColor='#C4C4C4';
+                }
+            }
+        </script>
+    </body>
+</html>

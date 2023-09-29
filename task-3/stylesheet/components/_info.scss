@@ -1,0 +1,16 @@
+.info {
+    padding: 2rem;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin: .9rem 10rem 2.6rem 5.9rem;
+    &__inside {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-left {
+            display: flex;
+            align-items: center;
+        }
+    }    
+}

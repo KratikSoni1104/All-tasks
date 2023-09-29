@@ -1,0 +1,116 @@
+.opac-steps {
+    opacity: 35%;
+    span.number-shape {
+        z-index: 1000;
+        position: relative;
+        border: 1px solid #FC983C33;
+        // opacity: %;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    
+}
+
+//---------------------------------------------------------------- CONTAINER ----------------------------------------------------------------//
+.container {
+
+    &__r {
+        &-4 {
+            background-color: rgba(252, 252, 252, 1);
+        }
+    }
+
+
+    &__l {
+        &-4 {
+            position: relative;
+            width: 50%;
+            background-color: rgba(255, 242, 227, 1);
+            .user {
+                padding: 0 14rem 2.3rem 14rem;
+                color: rgba(65, 65, 65, 1);
+
+                &__email {
+                    padding: 2.1rem 3rem;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+                    margin-top: -1.3rem;
+
+                    span {
+                        margin-right: 12.3rem;
+                    }
+                }
+
+                &__v-line {
+                    margin-left: 3rem;
+                }
+
+                &__pan {
+                    color: rgba(65, 65, 65, 1);
+
+                    &-input {
+                        width: 100%;
+                        color:#888888;
+                        padding: 2.1rem 0 2.3rem 3rem;
+                        box-sizing: border-box;
+                        border: none;
+                        outline: none;
+                        box-shadow: 0px 1px 4px 0px #0000001A;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .terms {
+                padding: 0 4.1rem 0 12.7rem;
+                display: flex;
+                align-items: stretch;
+               // gap: 1.1rem;
+
+                &-text {
+                    color: #000;
+                }
+                &-label {
+                    display: -webkit-inline-box;
+                    align-items: center;
+                    cursor: pointer;
+                    user-select: none;
+                    width: 1.5rem;
+                    
+                }
+                &-checkmark {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: background-color 0.3s ease-in-out;
+                    box-shadow: 0px 0.7499830722808838px 4.999887466430664px 0px #00000026 inset;
+                    border: 0.5px solid #AEC6D4
+                }
+
+                
+            }
+
+            .authenticate{
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+                background-color: #C4C4C4;
+                border-radius: 5px;
+                padding: 1.7rem 4rem;
+                margin: 4rem 0 10.4rem 15.3rem;
+            }
+        }
+    }
+}
+
+.terms-label input[type="checkbox"]:checked + .terms-checkmark {
+    background-color: #FC983C;
+    border: 1px solid #F2E4D6;
+}
