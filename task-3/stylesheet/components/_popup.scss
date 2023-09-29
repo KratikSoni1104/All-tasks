@@ -63,6 +63,15 @@
             display: inline-block;
             color: #FFFFFF;
             border-radius: 5px;
+            
+            
         }
     }
+}
+.popup__conatiner-button-img {
+    transition: all .5s ease-out;
+}
+
+.popup__container-button:hover .popup__conatiner-button-img {
+    transform: translateX(5px); /* Move the image 5px to the right on hover */
 }

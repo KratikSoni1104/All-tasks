@@ -172,6 +172,11 @@
                 border-radius: 5px;
                 position: relative;
                 cursor: pointer;
+                transition: all .5s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
 
             &--1 {

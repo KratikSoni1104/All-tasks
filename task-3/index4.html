@@ -108,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="terms">
+                <div class="terms" id="terms">
                     <label class="terms-label mr-13">
                         <input type="checkbox" class="terms-input d-none" id="checkbox" oninput="check()">
                         <span class="terms-checkmark">
@@ -131,9 +131,11 @@
                 const input = document.getElementById('input');
                 const check = document.getElementById('checkbox');
                 const btn = document.getElementById('auth');
+                const terms = document.getElementById('terms');
 
                 if(checkbox.checked && input.value !== "") {
                     btn.style.backgroundColor='#F3831D';
+                    terms.style.opacity='35%';
                 } else {
                     btn.style.backgroundColor='#C4C4C4';
                 }

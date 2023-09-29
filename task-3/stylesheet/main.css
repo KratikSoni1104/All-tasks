@@ -515,6 +515,10 @@ body {
   border-radius: 5px;
   position: relative;
   cursor: pointer;
+  transition: all 0.5s;
+}
+.container__left__products--1:hover, .container__left__products--2:hover, .container__left__products--3:hover, .container__left__products--4:hover {
+  transform: scale(1.05);
 }
 .container__left__products--1 {
   border: 1px solid rgba(0, 122, 64, 0.2);
@@ -633,6 +637,10 @@ body {
   background-color: #FFB571;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.container__l__product-types--1:hover, .container__l__product-types--2:hover, .container__l__product-types--3:hover, .container__l__product-types--4:hover, .container__l__product-types--5:hover, .container__l__product-types--6:hover, .container__l__product-types--7:hover, .container__l__product-types--8:hover, .container__l__product-types--9:hover, .container__l__product-types--10:hover {
+  transform: translateY(-1rem);
 }
 .container__l__product-types--1-name, .container__l__product-types--2-name, .container__l__product-types--3-name, .container__l__product-types--4-name, .container__l__product-types--5-name, .container__l__product-types--6-name, .container__l__product-types--7-name, .container__l__product-types--8-name, .container__l__product-types--9-name, .container__l__product-types--10-name {
   font-size: 18px;
@@ -1022,6 +1030,14 @@ body {
   display: inline-block;
   color: #FFFFFF;
   border-radius: 5px;
+}
+
+.popup__conatiner-button-img {
+  transition: all 0.5s ease-out;
+}
+
+.popup__container-button:hover .popup__conatiner-button-img {
+  transform: translateX(5px); /* Move the image 5px to the right on hover */
 }
 
 .info {

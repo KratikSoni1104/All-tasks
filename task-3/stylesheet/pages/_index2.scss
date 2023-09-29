@@ -109,6 +109,11 @@
                 background-color: #FFB571;
                 border-radius: 5px;
                 cursor: pointer;
+                transition: all .2s;
+
+                &:hover {
+                    transform: translateY(-1rem);
+                }
 
                 &-name {
                     font-size: 18px;
