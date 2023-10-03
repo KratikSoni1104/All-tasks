@@ -134,6 +134,10 @@ body {
   line-height: 2.4rem;
 }
 
+.l-25 {
+  line-height: 2.5rem;
+}
+
 .l-26 {
   line-height: 2.6rem;
 }
@@ -377,14 +381,15 @@ body {
 }
 
 .container {
-  max-width: 128rem;
+  max-width: 144rem;
   margin: 0 auto;
   display: flex;
   align-items: stretch;
+  justify-content: center;
 }
 .container__right {
   box-sizing: border-box;
-  max-width: 79.8rem;
+  flex: 0 0 62.5%;
   padding-left: 6rem;
   background-color: #FFF2E3;
   position: relative;
@@ -467,6 +472,7 @@ body {
 }
 .container__left {
   background-color: #fff;
+  flex: 0 0 37.5%;
 }
 .container__left__heading {
   letter-spacing: 0.2px;
@@ -552,8 +558,12 @@ body {
   margin-left: 3rem;
 }
 
+.container {
+  overflow-x: hidden;
+}
 .container__r-2 {
-  min-width: 50%;
+  max-width: 50%;
+  flex: 0 0 50%;
 }
 .container__r-head-2 {
   padding-top: 5.23rem;
@@ -580,9 +590,10 @@ body {
   padding-bottom: 5rem;
 }
 .container__l-2 {
-  min-width: 50%;
   padding-left: 5.05rem;
   position: relative;
+  flex: 0 0 50%;
+  box-sizing: border-box;
 }
 .container__l__heading {
   color: #F67C0B;
@@ -590,6 +601,7 @@ body {
   display: flex;
   align-items: center;
   padding-top: 5.3rem;
+  cursor: pointer;
 }
 .container__l__heading img {
   margin-right: 0.7rem;
@@ -616,7 +628,7 @@ body {
 }
 .container__l__product-types {
   display: grid;
-  grid-template-columns: repeat(4, 13.9rem);
+  grid-template-columns: repeat(4, 13.1rem);
   grid-template-rows: repeat(2, auto);
   -moz-column-gap: 1rem;
        column-gap: 1rem;
@@ -638,6 +650,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s;
+  max-width: 12.9rem;
 }
 .container__l__product-types--1:hover, .container__l__product-types--2:hover, .container__l__product-types--3:hover, .container__l__product-types--4:hover, .container__l__product-types--5:hover, .container__l__product-types--6:hover, .container__l__product-types--7:hover, .container__l__product-types--8:hover, .container__l__product-types--9:hover, .container__l__product-types--10:hover {
   transform: translateY(-1rem);
@@ -688,6 +701,7 @@ body {
 }
 .container__l__product-types--7-name {
   padding-right: 1.5rem;
+  font-size: 1.65rem;
 }
 .container__l__product-types--8-img {
   margin-bottom: 2.1rem;

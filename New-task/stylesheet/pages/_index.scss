@@ -1,0 +1,132 @@
+//----------------------------------- para color ----------------------------------------//
+.para-col {
+    color : var(--para);
+}
+
+// ------------------------------------------------   CONTAINER  ---------------- --------------------------------    //
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 3rem 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__greet {
+        color : #4A4A4A;
+    }
+
+    &__card {
+        &-box {
+            display: grid;
+            grid-template-columns: auto 56.4rem;
+            grid-template-rows: repeat(2,auto);
+            column-gap: 1.5rem;
+            row-gap: 1.6rem;
+        }
+
+        &-img {
+            grid-row-start: 1;
+            grid-row-end: -1;
+        }
+
+        &-details {
+            border: 0.5px solid #EEAE79;
+            padding: 1.7rem 6.1rem .9rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &--number {
+                height: max-content;
+            }
+        }
+
+        &-address {
+            padding: 1.9rem 1.8rem;
+            background-color: #FEE2C2;
+            border-radius: 10px;
+            display: flex;
+            gap: 5px;
+            text-align: left;
+        }
+    }
+
+    &__instructions {
+        box-sizing: border-box;
+        text-align: initial;
+        background-color: #FFF2E3;
+        border-radius: 10px;
+        padding: 2rem 3.3rem 2rem 2.5rem;
+        min-width: 86.4rem;
+
+        &__heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .heading--2 {
+                color: #F27B1A;
+            }
+        }
+
+        &__steps {
+            &-head {
+                display: flex;
+                gap: 4rem;
+                &--1,&--2 {
+                    display: flex;
+                    align-items: stretch;
+
+                    .detail {
+                        .list {
+                            display: flex;
+                            gap: 3rem;
+                            margin-left: 1.6rem;
+                        }
+
+                        .desc {
+                            a {
+                                color: #F27B1A;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    span {
+                        backface-visibility: hidden;
+                        height: 2rem;
+                        width: 2rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #FFBE81;
+                        border-radius: 50%;
+                        color: white;
+                        font-weight: 600;
+                        font-size: 1.3rem;
+                        line-height: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------------   header  ---------------- --------------------------------    //
+.header {
+    height: 6.5rem;
+    border-bottom: 5rem solid transparent;
+    border-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    border-image-slice: 1;
+    
+    &__logo {
+        padding: 1.8rem 0 1.9rem 4rem;
+    }
+}
+

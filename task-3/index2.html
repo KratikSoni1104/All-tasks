@@ -67,7 +67,7 @@
                 </p>
             </div>
             <div class="container__left container__l-2">
-                <p class="container__l__heading f-14 l-19 semibold">
+                <p class="container__l__heading f-14 l-19 semibold" onclick="handleOtherProducts()">
                     <img src="images/left-arrow.svg" alt="left arrow" class="container__l__heading-img">
                     See other loan products
                 </p>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="container__l__product-types--7" onclick="handleLAS()" id="l-7">
                         <img src="images/las.svg" alt="personal loan" class="container__l__product-types--7-img">
-                        <p class="container__l__product-types--7-name" id="las-head">Loan against
+                        <p class="container__l__product-types--7-name f-16 l=25" id="las-head">Loan against
                             Securities</p>
                         <img src="images/navigate-white.svg" alt="navigate" class="container__l__product-types-navigate">
                     </div>
@@ -181,6 +181,19 @@
         </div>
 
         <script>
+            const productCard = document.getElementById('product-card');
+            const lsa1 = document.getElementById('lsa-1');
+            const lsa2 = document.getElementById('lsa-2');
+            const lsa3 = document.getElementById('lsa-3');
+
+            const l1 = document.getElementById('l-1');
+            const l2 = document.getElementById('l-2');
+            const l3 = document.getElementById('l-3');
+            const l4 = document.getElementById('l-4');
+            const l5 = document.getElementById('l-5');
+            const l6 = document.getElementById('l-6');
+            const l7= document.getElementById('l-7');
+
             function handlePopupClose() {
                 const popup = document.querySelector('#popup');
                 popup.classList.add('dn' , 'dnone');
@@ -192,21 +205,6 @@
             }
 
             function handleLAS() {
-                console.log("hello");
-                const productCard = document.getElementById('product-card');
-                const lsa1 = document.getElementById('lsa-1');
-                const lsa2 = document.getElementById('lsa-2');
-                const lsa3 = document.getElementById('lsa-3');
-
-                const l1 = document.getElementById('l-1');
-                const l2 = document.getElementById('l-2');
-                const l3 = document.getElementById('l-3');
-                const l4 = document.getElementById('l-4');
-                const l5 = document.getElementById('l-5');
-                const l6 = document.getElementById('l-6');
-                const l7= document.getElementById('l-7');
-                
-
                 productCard.textContent='Loan against Securities';
                 productCard.classList.add('p');
                 productCard.classList.add('pl');
@@ -221,6 +219,23 @@
                 l5.classList.add('d-none');
                 l6.classList.add('d-none');
                 l7.classList.add('d-none');
+            }
+
+            function handleOtherProducts() {
+                productCard.textContent='Loan';
+                productCard.classList.remove('p');
+                productCard.classList.remove('pl');
+                lsa1.classList.add('d-none');
+                lsa2.classList.add('d-none');
+                lsa3.classList.add('d-none');
+             
+                l1.classList.remove('d-none');
+                l2.classList.remove('d-none');
+                l3.classList.remove('d-none');
+                l4.classList.remove('d-none');
+                l5.classList.remove('d-none');
+                l6.classList.remove('d-none');
+                l7.classList.remove('d-none');
             }
         </script>
     </body>
