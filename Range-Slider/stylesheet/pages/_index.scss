@@ -1,0 +1,52 @@
+//----------------------------------- para color ----------------------------------------//
+.para-col {
+    color : var(--para);
+}
+
+// ------------------------------------------------   CONTAINER  ---------------- --------------------------------    //
+.container {
+    max-width: 96rem;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2.2rem 12rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__cal-open {
+        border: none;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        background-color: #F27B1A;
+        color: #fff;
+        border-radius: 20px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all .5s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0 , 0.2);
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0 , 0.4);
+        }
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0 , 0.3);
+        }
+    }
+}
+
+// ------------------------------------------------   header  ---------------- --------------------------------    //
+.header {
+    height: 6.5rem;
+    border-bottom: 6rem solid black;
+    border-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    border-image-slice: 1;
+    
+    &__logo {
+        padding: 1.8rem 0 1.9rem 4rem;
+    }
+}
+

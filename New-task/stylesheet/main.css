@@ -413,7 +413,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-.container__greet {
+.container__greet-box {
   color: #4A4A4A;
 }
 .container__card-box {

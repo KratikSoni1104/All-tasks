@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+
+        <link rel="stylesheet" href="stylesheet/main.css">
+        
+        <title>Task 2</title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="images/icici-logo.svg" alt="logo image" class="header__logo">
+        </header>
+        <main class="container">
+            <button class="container__cal-open" onclick="openCal()">click to open calculator</button>
+            <div class="cal dn dnone" id="cal">
+                <div class="cal__content">
+                    <div class="container__cal-close" onclick="closeCal()">
+                        <img src="images/close-circle-icon.svg" alt="close-icon" class="cal__content-close-circle-icon pointer">
+                        <img src="images/close-cross-icon.svg" alt="close-icon" class="cal__content-close-cross-icon pointer">
+                    </div>
+                    
+                    <p class="cal__heading semibold f-14 l-16 pl-25 m-13">Calculate your expenses</p>
+
+                    <div class="cal__types">
+                        <a href="#" class="cal__types--1 cal__type semibold f-12 l-18" onclick="handleCalExp()" id="cal-exp">Expense calculator</a>
+                        <a href="#" class="cal__types--2 cal__type semibold f-12 l-18" onclick="handleCalGen()" id="cal-gen">General calculator</a>
+                    </div>
+
+                    <!-- code for general calculator -->
+
+                    <div class="cal__gen mt-16" id="gen">
+                        <input class="cal__gen-screen m-10" type="text" placeholder="0" id="inputBox">
+                        <div class="cal__gen-buttons">
+                            <button class="btn operator f">AC</button>
+                            <button class="btn operator f">+/-</button>
+                            <button class="btn operator">%</button>
+                            <button class="btn operator" >÷</button>
+                            <button class="btn operand" >7</button>
+                            <button class="btn operand" >8</button>
+                            <button class="btn operand" >9</button>
+                            <button class="btn operator">x</button>
+                            <button class="btn operand">4</button>
+                            <button class="btn operand" >5</button>
+                            <button class="btn operand" >6</button>
+                            <button class="btn operator minus" >-</button>
+                            <button class="btn operand" >1</button>
+                            <button class="btn operand" >2</button>
+                            <button class="btn operand" >3</button>
+                            <button class="btn operator" >+</button>
+                            <button class="btn operand zero" >0</button>
+                            <button class="btn operand" >.</button>
+                            <button class="btn operator" >=</button>
+                        </div>
+                    </div>
+
+                    <!-- code for expense calculator -->
+
+                    <div class="cal__exp mt-20 para-col d-none" id="exp">
+                        <div class="cal__exp-type">
+                            <p class="name">Healthcare</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec1" onclick="handleDecreament('count1')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count1"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc1" onclick="handleIncreament('count1')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Rent</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec2" onclick="handleDecreament('count2')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count2"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc2" onclick="handleIncreament('count2')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Food</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec3" onclick="handleDecreament('count3')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count3"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc3" onclick="handleIncreament('count3')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Child’s education</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec4" onclick="handleDecreament('count4')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count4"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc4" onclick="handleIncreament('count4')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Shopping</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec5" onclick="handleDecreament('count5')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count5"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc5" onclick="handleIncreament('count5')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Entertainment</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec6" onclick="handleDecreament('count6')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count6"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc6" onclick="handleIncreament('count6')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Healthcare</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec7" onclick="handleDecreament('count7')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count7"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc7" onclick="handleIncreament('count7')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Emergencies</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec8" onclick="handleDecreament('count8')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count8"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc8" onclick="handleIncreament('count8')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+                        <div class="cal__exp-type">
+                            <p class="name">Miscellaneous</p>
+                            <div class="counter">
+                                <button class="dec work" id="dec9" onclick="handleDecreament('count9')"><img src="images/minus-icon.svg" alt="minus"></button>
+                                <span class="count" id="count9"> <span class="r-col">₹</span> 21000</span>
+                                <button class="inc work" id="inc9" onclick="handleIncreament('count9')"><img src="images/add-icon.svg" alt="plus"></button>
+                            </div>
+                        </div>
+
+                        <div class="cal__exp-line mt-2 m-16"></div>
+
+                        <div class="cal__exp-total">
+                            <p class="head semibold f-14 l-16">Total expenses</p>
+                            <p class="cost bold f-20 l-22"><span class="">₹</span>4,50,00,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="index.js"></script>
+    </body>
+</html>
