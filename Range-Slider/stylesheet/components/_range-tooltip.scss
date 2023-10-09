@@ -1,0 +1,30 @@
+.tooltip-range {
+    position: absolute;
+  
+    color: #fff;
+    padding: 1.1rem 2rem;
+    border-radius:0.6rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+    pointer-events: none;
+    width: max-content;
+    background-color:#414141;
+    opacity: 0.9;
+    bottom: 2.5rem;
+    left: 0%;
+  }
+  .tooltip-range::after {
+    content: "";
+    position: absolute;
+    top:43px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    opacity: 0.9;
+    border-color: #414141 transparent transparent transparent;
+  }
+  

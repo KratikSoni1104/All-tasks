@@ -13,7 +13,7 @@ function handleTotalExpene() {
         t += parseInt(input.innerText.replace(/\D/g, ''), 10);
     })
 
-    total.textContent = '₹' + t.toLocaleString();
+    total.innerHTML = '<span style="font-size:14px ; line-height:22px;letter-spacing:.2px">' + '₹'  + '</span>' + t.toLocaleString();
     const rup = document.querySelector('.total-expense');
     rup.style.fontWeight = '400';
     rup.style.fontSize = '14px';

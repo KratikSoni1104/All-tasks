@@ -19,7 +19,7 @@
               <div class="box mt-115">
                 <p class="head semibold f-10 l-15 m-3">YOUR Retirement period </p>
                 <p class="years-number semibold f-30 l-35 d-ib m-3">30<span class="f-12 l-30 ml-5">Years</span></p>
-                <p class="years-from-to semibold f-18 l-12">2035 - 2065</p>
+                <p class="years-from-to semibold f-18 l-12"><span class="year-left">2063</span> - <span class="year-right">2125</span></p>
                 <div class="box-shape"></div>
               </div>
               <div class="range-slider-container">
@@ -51,8 +51,9 @@
                   </div>
                 </div>
                 <div class="range-input ">
-                    <input type="range" min="40" max="102" value="40" class="range-min">
-                    <input type="range" min="40" max="102" value="102" class="range-max">
+                    <input type="range" min="40" max="102" value="40" class="range-min slider">
+                    <input type="range" min="40" max="102" value="102" class="range-max slider">
+                    <div class="tooltip-range" id="tooltip-range">& 10</div>
                 </div>
               </div>
             </div>
@@ -65,38 +66,3 @@
 
 
 
-<!-- <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">  
-    <title>Price Range Slider | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h2>Price Range</h2>
-        <p>Use slider or enter min and max price</p>
-      </header>
-      <div class="price-input">
-        <div class="field">
-          <span>Min</span>
-          <input type="number" class="input-min" value="2500">
-        </div>
-        <div class="separator">-</div>
-        <div class="field">
-          <span>Max</span>
-          <input type="number" class="input-max" value="7500">
-        </div>
-      </div>
-      <div class="slider">
-        <div class="progress"></div>
-      </div>
-      <div class="range-input">
-        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html> -->
