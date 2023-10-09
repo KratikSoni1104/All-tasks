@@ -8,142 +8,93 @@
 
         <link rel="stylesheet" href="stylesheet/main.css">
         
-        <title>Task 2</title>
+        <title>Range Slider</title>
     </head>
     <body>
         <header class="header">
             <img src="images/icici-logo.svg" alt="logo image" class="header__logo">
         </header>
         <main class="container">
-            <button class="container__cal-open" onclick="openCal()">click to open calculator</button>
-            <div class="cal dn dnone" id="cal">
-                <div class="cal__content">
-                    <div class="container__cal-close" onclick="closeCal()">
-                        <img src="images/close-circle-icon.svg" alt="close-icon" class="cal__content-close-circle-icon pointer">
-                        <img src="images/close-cross-icon.svg" alt="close-icon" class="cal__content-close-cross-icon pointer">
-                    </div>
-                    
-                    <p class="cal__heading semibold f-14 l-16 pl-25 m-13">Calculate your expenses</p>
-
-                    <div class="cal__types">
-                        <a href="#" class="cal__types--1 cal__type semibold f-12 l-18" onclick="handleCalExp()" id="cal-exp">Expense calculator</a>
-                        <a href="#" class="cal__types--2 cal__type semibold f-12 l-18" onclick="handleCalGen()" id="cal-gen">General calculator</a>
-                    </div>
-
-                    <!-- code for general calculator -->
-
-                    <div class="cal__gen mt-16" id="gen">
-                        <input class="cal__gen-screen m-10" type="text" placeholder="0" id="inputBox">
-                        <div class="cal__gen-buttons">
-                            <button class="btn operator f">AC</button>
-                            <button class="btn operator f">+/-</button>
-                            <button class="btn operator">%</button>
-                            <button class="btn operator" >÷</button>
-                            <button class="btn operand" >7</button>
-                            <button class="btn operand" >8</button>
-                            <button class="btn operand" >9</button>
-                            <button class="btn operator">x</button>
-                            <button class="btn operand">4</button>
-                            <button class="btn operand" >5</button>
-                            <button class="btn operand" >6</button>
-                            <button class="btn operator minus" >-</button>
-                            <button class="btn operand" >1</button>
-                            <button class="btn operand" >2</button>
-                            <button class="btn operand" >3</button>
-                            <button class="btn operator" >+</button>
-                            <button class="btn operand zero" >0</button>
-                            <button class="btn operand" >.</button>
-                            <button class="btn operator" >=</button>
-                        </div>
-                    </div>
-
-                    <!-- code for expense calculator -->
-
-                    <div class="cal__exp mt-20 para-col d-none" id="exp">
-                        <div class="cal__exp-type">
-                            <p class="name">Healthcare</p>
-                            <div class="counter">
-                                <button class="dec" id="dec1" onclick="handleDecreament('count1')">-</button>
-                                <span class="count" id="count1"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc1" onclick="handleIncreament('count1')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Rent</p>
-                            <div class="counter">
-                                <button class="dec" id="dec2" onclick="handleDecreament('count2')">-</button>
-                                <span class="count" id="count2"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc2" onclick="handleIncreament('count2')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Food</p>
-                            <div class="counter">
-                                <button class="dec" id="dec3" onclick="handleDecreament('count3')">-</button>
-                                <span class="count" id="count3"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc3" onclick="handleIncreament('count3')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Child’s education</p>
-                            <div class="counter">
-                                <button class="dec" id="dec4" onclick="handleDecreament('count4')">-</button>
-                                <span class="count" id="count4"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc4" onclick="handleIncreament('count4')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Shopping</p>
-                            <div class="counter">
-                                <button class="dec" id="dec5" onclick="handleDecreament('count5')">-</button>
-                                <span class="count" id="count5"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc5" onclick="handleIncreament('count5')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Entertainment</p>
-                            <div class="counter">
-                                <button class="dec" id="dec6" onclick="handleDecreament('count6')">-</button>
-                                <span class="count" id="count6"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc6" onclick="handleIncreament('count6')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Healthcare</p>
-                            <div class="counter">
-                                <button class="dec" id="dec7" onclick="handleDecreament('count7')">-</button>
-                                <span class="count" id="count7"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc7" onclick="handleIncreament('count7')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Emergencies</p>
-                            <div class="counter">
-                                <button class="dec" id="dec8" onclick="handleDecreament('count8')">-</button>
-                                <span class="count" id="count8"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc8" onclick="handleIncreament('count8')">+</button>
-                            </div>
-                        </div>
-                        <div class="cal__exp-type">
-                            <p class="name">Miscellaneous</p>
-                            <div class="counter">
-                                <button class="dec" id="dec9" onclick="handleDecreament('count9')">-</button>
-                                <span class="count" id="count9"> <span>₹</span> 21000</span>
-                                <button class="inc" id="inc9" onclick="handleIncreament('count9')">+</button>
-                            </div>
-                        </div>
-
-                        <div class="cal__exp-line mt-2 m-16"></div>
-
-                        <div class="cal__exp-total">
-                            <p class="head semibold f-14 l-16">Total expenses</p>
-                            <p class="cost bold f-20 l-22"><span class="">₹</span>4,50,00,000</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="slider-container">
+              <div class="box">
+                <p class="head semibold f-10 l-15 m-3">YOUR Retirement period </p>
+                <p class="years-number semibold f-30 l-35 d-ib m-3">30<span class="f-12 l-30 ml-5">Years</span></p>
+                <p class="years-from-to semibold f-18 l-12">2035 - 2065</p>
+                <div class="box-shape"></div>
+              </div>
+              <div class="slider mt-200">
+                  <div class="lines">
+                      <span class="lines--1"></span>
+                      <span class="lines--2"></span>
+                      <span class="lines--3"></span>
+                      <span class="lines--4"></span>
+                      <span class="lines--5"></span>
+                      <span class="lines--6"></span>
+                      <span class="lines--7"></span>
+                      <span class="lines--8"></span>
+                      <span class="lines--9"></span>
+                      <span class="lines--10"></span>
+                      <span class="lines--11"></span>
+                      <span class="lines--12"></span>
+                      <span class="lines--13"></span>
+                  </div>
+                  <div class="progress"></div>
+                  <div class="progress-year">
+                      <p class="progress-year--1">40 yrs</p>
+                      <p class="progress-year--2">50 yrs</p>
+                      <p class="progress-year--3">60 yrs</p>
+                      <p class="progress-year--4">70 yrs</p>
+                      <p class="progress-year--5">80 yrs</p>
+                      <p class="progress-year--6">90yrs</p>
+                      <p class="progress-year--7">102 yrs</p>
+                  </div>
+              </div>
+              <div class="range-input mt-200">
+                  <input type="range" min="40" max="102" value="40" class="range-min">
+                  <input type="range" min="40" max="102" value="102" class="range-max">
+              </div>
             </div>
+            
         </main>
-
         <script src="index.js"></script>
     </body>
+
 </html>
+
+
+
+<!-- <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Price Range Slider | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h2>Price Range</h2>
+        <p>Use slider or enter min and max price</p>
+      </header>
+      <div class="price-input">
+        <div class="field">
+          <span>Min</span>
+          <input type="number" class="input-min" value="2500">
+        </div>
+        <div class="separator">-</div>
+        <div class="field">
+          <span>Max</span>
+          <input type="number" class="input-max" value="7500">
+        </div>
+      </div>
+      <div class="slider">
+        <div class="progress"></div>
+      </div>
+      <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html> -->

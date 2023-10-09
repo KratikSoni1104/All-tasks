@@ -33,7 +33,11 @@
                     <!-- code for general calculator -->
 
                     <div class="cal__gen mt-16" id="gen">
-                        <input class="cal__gen-screen m-10" type="text" placeholder="0" id="inputBox">
+                        <div class="cal__gen-screen m-10">
+                            <p class="result-1" id="inputBox2"></p>
+                            <p class="result-2" id="inputBox">0</p>
+                        </div>
+                        <!-- <input class="cal__gen-screen m-10" type="text" placeholder="0" id="inputBox"> -->
                         <div class="cal__gen-buttons">
                             <button class="btn operator f">AC</button>
                             <button class="btn operator f">+/-</button>
@@ -137,7 +141,7 @@
 
                         <div class="cal__exp-total">
                             <p class="head semibold f-14 l-16">Total expenses</p>
-                            <p class="cost bold f-20 l-22"><span class="">₹</span>4,50,00,000</p>
+                            <p class="cost bold f-20 l-22"><span class="total-expense" id="r">₹</span>1,89,000</p>
                         </div>
                     </div>
                 </div>

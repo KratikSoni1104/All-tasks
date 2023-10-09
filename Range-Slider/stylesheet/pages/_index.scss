@@ -5,38 +5,152 @@
 
 // ------------------------------------------------   CONTAINER  ---------------- --------------------------------    //
 .container {
-    max-width: 96rem;
+    max-width: 144rem;
     margin: 0 auto;
-    position: relative;
     box-sizing: border-box;
-    padding: 2.2rem 12rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &__cal-open {
-        border: none;
-        text-transform: uppercase;
-        padding: 1rem 2rem;
-        background-color: #F27B1A;
-        color: #fff;
-        border-radius: 20px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        cursor: pointer;
-        transition: all .5s;
-        box-shadow: 0 2px 8px rgba(0, 0, 0 , 0.2);
+    .box {
+      z-index: 10;
+      box-sizing: border-box;
+      max-width: 17.2rem;
+      position: relative;
+      right: 0;
+      //top: 5rem;
+      padding: 1.5rem;
+      border: 1px solid #FCF7F2;
+      background-color: #FFF6F1;
+      border-radius: 9px;
 
-        &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0 , 0.4);
+
+      &-shape {
+        position: absolute;
+        z-index: 0;
+        width: 43.14px;
+        height: 43.14px;
+        border-radius: 6px;
+        transform: rotate(45deg);
+        background-color: #FFF6F1;
+
+      }
+
+      .head {
+        color:  #414141;
+        letter-spacing: 5%;
+      }
+      .years {
+        &-head {
+          color: #F27919;
         }
-        &:active {
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0 , 0.3);
+        &-number {
+          color: #F27919;
+          display: flex;
+          align-items: center;
         }
+        &-from-to {
+          color:  #636363;
+        }
+      }
+    }
+
+    .range-input {
+      position: absolute;
+      left: 5px;
+      top:  -10px;
+  
+      input {
+        position: absolute;
+        left: 0;
+        width: 89rem;
+        background: none;
+        appearance: none;
+        pointer-events: none;
+      }
+      input[type="range"]::-webkit-slider-thumb{
+          height: 3.2rem;
+          width: 3.2rem;
+          //border-radius: 50%;
+          background: url("../../images/thumb.svg");
+          background-size: cover;
+          pointer-events: auto;
+          appearance: none;
+          cursor: pointer;
+          z-index: 1000;          
+      }
+    //   input[type="range"]::-webkit-slider-thumb::before {
+    //     content: "";
+    //     display: block;
+    //     width: 1.4rem;
+    //     height: 1.4rem;
+    //     //background-color: #F27919; 
+    //     border-radius: 50%; 
+    //     background-image: url("../../images/thumb.svg");
+    //     background-size: cover;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    // }
+    }
+
+    .slider {
+      min-width: 89rem;
+      height: 1rem;
+      background-color: #EBEEF6;
+      border-radius: 10px;
+      box-shadow: 0px 4px 3px 0px #8FA9F11A inset;
+      position: relative;
+
+      .lines {
+        position: absolute;
+        top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 89rem;
+
+        &--1,&--2,&--3,&--4,&--5,&--6,&--7,&--8,&--9,&--10,&--11,&--12,&--13 {
+          width: 4px;
+          transform: rotate(-90deg);
+          border-radius: 1px;
+          opacity: 0.4;
+          border: 1px solid #CAD2E8;
+          z-index: 100;
+        }
+
+        &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8, &--9, &--10, &--11, &--12, &--13 {
+          z-index: 10;
+        }
+      }
+
+      .progress {
+        height: 1rem;
+        border-radius: 10px;
+        background-color: #F27919;
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        &-year {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 2rem;
+          color: #414141;
+          font-size: 1.2rem;
+          line-height: 1.634rem;
+        }
+      }
     }
 }
+
+.slider-container {
+  position: relative;
+}
+
+  
 
 // ------------------------------------------------   header  ---------------- --------------------------------    //
 .header {
@@ -50,3 +164,165 @@
     }
 }
 
+
+
+
+/* Import Google Font - Poppins */
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+// *{
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   font-family: 'Poppins', sans-serif;
+// }
+// body{
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 100vh;
+//   background: #17A2B8;
+// }
+// ::selection{
+//   color: #fff;
+//   background: #17A2B8;
+// }
+// .wrapper{
+//   width: 400px;
+//   background: #fff;
+//   border-radius: 10px;
+//   padding: 20px 25px 40px;
+//   box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+// }
+// header h2{
+//   font-size: 24px;
+//   font-weight: 600;
+// }
+// header p{
+//   margin-top: 5px;
+//   font-size: 16px;
+// }
+// .price-input{
+//   width: 100%;
+//   display: flex;
+//   margin: 30px 0 35px;
+// }
+// .price-input .field{
+//   display: flex;
+//   width: 100%;
+//   height: 45px;
+//   align-items: center;
+// }
+// .field input{
+//   width: 100%;
+//   height: 100%;
+//   outline: none;
+//   font-size: 19px;
+//   margin-left: 12px;
+//   border-radius: 5px;
+//   text-align: center;
+//   border: 1px solid #999;
+//   -moz-appearance: textfield;
+// }
+// input[type="number"]::-webkit-outer-spin-button,
+// input[type="number"]::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+// }
+// .price-input .separator{
+//   width: 130px;
+//   display: flex;
+//   font-size: 19px;
+//   align-items: center;
+//   justify-content: center;
+// }
+// .slider{
+//   height: 5px;
+//   position: relative;
+//   background: #ddd;
+//   border-radius: 5px;
+// }
+// .slider .progress{
+//   height: 100%;
+//   left: 25%;
+//   right: 25%;
+//   position: absolute;
+//   border-radius: 5px;
+//   background: #17A2B8;
+// }
+// .range-input{
+//   position: relative;
+// }
+// .range-input input{
+//   position: absolute;
+//   width: 100%;
+//   height: 5px;
+//   top: -5px;
+//   background: none;
+//   pointer-events: none;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+// }
+// input[type="range"]::-webkit-slider-thumb{
+//   height: 17px;
+//   width: 17px;
+//   border-radius: 50%;
+//   background: #17A2B8;
+//   pointer-events: auto;
+//   -webkit-appearance: none;
+//   box-shadow: 0 0 6px rgba(0,0,0,0.05);
+// }
+// input[type="range"]::-moz-range-thumb{
+//   height: 17px;
+//   width: 17px;
+//   border: none;
+//   border-radius: 50%;
+//   background: #17A2B8;
+//   pointer-events: auto;
+//   -moz-appearance: none;
+//   box-shadow: 0 0 6px rgba(0,0,0,0.05);
+// }
+
+
+
+
+// js
+// const rangeInput = document.querySelectorAll(".range-input input"),
+// priceInput = document.querySelectorAll(".price-input input"),
+// range = document.querySelector(".slider .progress");
+// let priceGap = 1000;
+
+// priceInput.forEach(input =>{
+//     input.addEventListener("input", e =>{
+//         let minPrice = parseInt(priceInput[0].value),
+//         maxPrice = parseInt(priceInput[1].value);
+        
+//         if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+//             if(e.target.className === "input-min"){
+//                 rangeInput[0].value = minPrice;
+//                 range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+//             }else{
+//                 rangeInput[1].value = maxPrice;
+//                 range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+//             }
+//         }
+//     });
+// });
+
+// rangeInput.forEach(input =>{
+//     input.addEventListener("input", e =>{
+//         let minVal = parseInt(rangeInput[0].value),
+//         maxVal = parseInt(rangeInput[1].value);
+
+//         if((maxVal - minVal) < priceGap){
+//             if(e.target.className === "range-min"){
+//                 rangeInput[0].value = maxVal - priceGap
+//             }else{
+//                 rangeInput[1].value = minVal + priceGap;
+//             }
+//         }else{
+//             priceInput[0].value = minVal;
+//             priceInput[1].value = maxVal;
+//             range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+//             range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+//         }
+//     });
+// });

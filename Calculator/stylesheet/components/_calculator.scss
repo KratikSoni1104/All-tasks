@@ -92,38 +92,48 @@
 
     &__gen {
         padding: 0 3.3rem 4.271rem;
-        // &-screen {
-        //     border: 1.05px solid #FCCCA6;
-        //     background-color: #fff;
-        //     border-radius: 5.27px;
-        //     display: flex;
-        //     align-items: flex-end;
-        //     justify-content: flex-end;
-        //     .result {
-        //         color: #363636;
-        //         font-size: 5rem;
-        //         line-height: 6.8rem;
-        //         padding: 3.6rem 2.9rem 1.3rem;
-        //     }
-        // }
-
         &-screen {
-            width: 27.1rem;
             border: 1.05px solid #FCCCA6;
-            border-radius: 5.27px;
             background-color: #fff;
-            padding: 3.6rem 2.9rem 1.3rem 0;
-            font-size: 5rem;
-            line-height: 6.8rem;
-            text-align: right;
+            border-radius: 5.27px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            flex-direction: column;
             box-sizing: border-box;
-            outline: none;
-            color: #263238;
+            max-width: 27.1rem;
+            min-height: 11.7rem;
+            padding: 1.3rem 2.9rem 1.3rem 0;
 
-            &::-webkit-input-placeholder {
-                color: #263238;
+            .result-1 {
+                font-size: 1.5rem;
+                color: #363636;
+                color: #363636;
+            }
+            .result-2 {
+                color: #363636;
+                font-size: 2.5rem;
+                color: #363636;
             }
         }
+
+        // &-screen {
+        //     width: 27.1rem;
+        //     border: 1.05px solid #FCCCA6;
+        //     border-radius: 5.27px;
+        //     background-color: #fff;
+        //     padding: 3.6rem 2.9rem 1.3rem 0;
+        //     font-size: 5rem;
+        //     line-height: 6.8rem;
+        //     text-align: right;
+        //     box-sizing: border-box;
+        //     outline: none;
+        //     color: #263238;
+
+        //     &::-webkit-input-placeholder {
+        //         color: #263238;
+        //     }
+        // }
 
         &-buttons {
             display: grid;
