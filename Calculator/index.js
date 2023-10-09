@@ -64,6 +64,7 @@ arr.forEach(button => {
             str = str.replace(/x/g, '*').replace(/÷/g, '/');
             input2.textContent = "";
             input.textContent = eval(str);
+            finalString = "";
             string = eval(str).toString();
         } else if(e.target.innerHTML === 'AC') {
             string = "0";
