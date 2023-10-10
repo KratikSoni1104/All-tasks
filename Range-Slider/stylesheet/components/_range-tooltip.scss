@@ -8,13 +8,12 @@
     line-height: 1.5rem;
     font-weight: 600;
     text-align: center;
-    display: none;
+    //display: none;
     pointer-events: none;
     width: max-content;
     background-color:#414141;
     opacity: 0.9;
     bottom: 2.5rem;
-    left: 0%;
   }
   .tooltip-range::after {
     content: "";
@@ -27,4 +26,10 @@
     opacity: 0.9;
     border-color: #414141 transparent transparent transparent;
   }
-  
+
+  .tr-1 {
+    left: 100%;
+  }
+  .tr-2 {
+    left: 0%;
+  }
